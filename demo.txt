@@ -9,3 +9,4 @@ Mat. Nr. Name Fach Note Versuch Angetreten
 000008 Sonnenkönig, Der Elektr. Tech. 27 ja
 1000009 Strauß, Engelbert Elektr. Tech. 10 ja
 000010 Gustav, Franz Elektr. Tech. 3.0 ja
+
