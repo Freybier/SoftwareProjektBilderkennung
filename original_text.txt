@@ -1,0 +1,11 @@
+Mat. Nr. Name Fach Note Versuch Angetreten
+000001 Li, Huen Elektr. Tech. 1,3 ja
+000002 Eraslan, Cem Elektr. Tech. 4,0 2j a
+000003 du Pont, Jean-Jaque Elektr. Tech. 5,0 ING
+000004 Frisch, Moritz Elektr. Tech. 5,0 ja
+000005 Minh, Nguyen Elektr. Tech. 1,7 2ja
+000006 Roy, Siegfried und Elektr. Tech. 3,7 3 ja
+000007 Bewölkt, Stark Elektr. Tech. 2,3 2ja
+000008 Sonnenkönig, Der Elektr. Tech. 2,7 ja
+000009 Strauß, Engelbert Elektr. Tech. 1,0 ja
+000010 Gustav, Franz Elektr. Tech. 3,0 ja
