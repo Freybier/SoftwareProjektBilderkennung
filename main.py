@@ -10,10 +10,10 @@ text = pytesseract.image_to_string(PIL.Image.open("Images/test_text.png"), confi
 #print(text)
 
 
-#file = open("demo.txt", "w")
-#file.write(text)
+file = open("demo.txt", "w")
+file.write(text)
 
-#file.close()
+file.close()
 
 vergleich(text)
 
