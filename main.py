@@ -2,20 +2,24 @@ import pytesseract
 import PIL.Image
 import cv2
 from vergleich import *
+from gui import *
 
-"""Hallo ich bin Yann"""
+
+files = dateizug()
+
 myconfig = r"--psm 6 --oem 3"
 
-text = pytesseract.image_to_string(PIL.Image.open("Images/test_text.png"), config=myconfig, lang="deu")
-#print(text)
-
+for x in files:
+    text = pytesseract.image_to_string(PIL.Image.open(x), config=myconfig, lang="deu")
+    print(text)
 
 file = open("demo.txt", "w")
 file.write(text)
-
 file.close()
 
-vergleich(text)
+#vergleich(text)
+
+
 
 """
 bild = cv2.imread("Images/test_text.png")
