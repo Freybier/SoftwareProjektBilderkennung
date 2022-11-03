@@ -1,19 +1,12 @@
-660044 IIM-119-01 Labor Algorithmen und Datenstrukturen Gakar
-
-startHISsheet endHISsheet
-
-mtknr sortname bewertung pstatus  pversuch _ktxt spversion semester pdatum _pnr bonus, labnr pordnr porgnr Mail
-
-3838383 Friese, Sina "200 AN 7 M-IIM 20192 20212 17.01.2022 649352 o 3369510 53225 204220 sina.friese@stud.hs-hannover.de
-1036272 Prinz, Birgit 200 AN 7 M-IIM 20192 20212 17.01.2022 649352 o 3369510 53225 204220 birgit.prinz@stud.hs-hannover.de
-1026374 Fray, Luki 7300 AN 7 M-IIM 20192 20212 17.01.2022 649352 o 3369510 53225 204220 luki.fray@stud.hs-hannover.de
-1926437 ‚Aurum, Hugo "200 AN 7 M-IIM 20192 20212 17.01.2022 649352 o 3369510 53225 204220 hugo.aurum@stud.hs-hannover.de
-1257245 Ketchup, Ash "100 AN 7 M-IIM 20192 20212 17.01.2022 649352 o 3369510 53225 204220 ash.ketchup@stud.hs-hannover.de
-1582021 Keleher, Siobhan 7300 AN 7 M-IIM 20192 20212 17.01.2022 649352 o 3369510 53225 204220 siobhan.keleher@stud.hs-hannover.de
-1680234 Find, Nemo 370 AN 7 M-IIM 20192 20212 17.01.2022 649352 o 3369510 53225 204220 nemo.find@stud.hs-hannover.de
-1937643 Poll, Lea 200 AN 7 M-IIM 20192 20212 17.01.2022 649352 o 3369510 53225 204220 lea.poll@stud.hs-hannover.de
-3454235 Kopf, Serkan "200 AN 7 M-IIM 20192 20212 17.01.2022 649352 o 3369510 53225 204220 serkan.kopf@stud.hs-hannover.de
-1467634 Loch, Annika 770 AN 7 M-IIM 20192 20212 17.01.2022 649352 o 3369510 53225 204220 annika.loch@stud.hs-hannover.de
-2323451 Grab, Hannelie 7500 AN 7 M-IIM 20192 20212 17.01.2022 649352 o 3369510 53225 204220 hannelie.grab@stud.hs-hannover.de
-aa2s8aıc  nmn.Ealda pia "ann AN r Po An1o9 49497 a7nı2n92 eaaacı n aaracrın |eayıc Anasan nn Ealdarschıd he hammer de
+Mat. Nr. Name Fach Note Versuch Angetreten
+000001 Li, Huen Elektr. Tech. 13 ja
+000002 Eraslan, Cem Elektr. Tech. 40 2ja
+000003 du Pont, Jean-Jaque Elektr. Tech. 5.0 INGR
+000004 Frisch, Moritz Elektr. Tech. 5.0 ja
+000005 Minh, Nguyen Elektr. Tech. 17 2ja
+000006 Roy, Siegfried und Elektr. Tech. 3.7 3ja
+000007 Bewölkt, Stark Elektr. Tech. 23 2ja
+000008 Sonnenkönig, Der Elektr. Tech. 27 ja
+1000009 Strauß, Engelbert Elektr. Tech. 10 ja
+000010 Gustav, Franz Elektr. Tech. 3.0 ja
 

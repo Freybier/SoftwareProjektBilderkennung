@@ -4,21 +4,21 @@ import cv2
 from vergleich import *
 from gui import *
 
-
 files = dateizug()
 
 myconfig = r"--psm 6 --oem 3"
 
 for x in files:
     text = pytesseract.image_to_string(PIL.Image.open(x), config=myconfig, lang="deu")
-    print(text)
+    # print(text)
+    vergleich(text)
+    print('\n\n_______________________________________\n\n')
 
 file = open("demo.txt", "w")
 file.write(text)
 file.close()
 
-#vergleich(text)
-
+# vergleich(text)
 
 
 """
@@ -41,4 +41,3 @@ cv2.imshow('Images/test_text.png', bild)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 """
-
