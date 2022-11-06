@@ -18,7 +18,6 @@ def dateizug():
             files = filebrowser()
         if event in (sg.WIN_CLOSED, 'Ok'):
             break
-
     print(values[0])
     print(values[1])
     window.close()
