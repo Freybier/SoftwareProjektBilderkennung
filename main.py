@@ -1,6 +1,9 @@
 from vergleich import *
 from gui import *
 from auslesen import *
+from database import *
+
+initialize_database()
 
 files = dateizug()
 
