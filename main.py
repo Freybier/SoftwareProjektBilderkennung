@@ -11,8 +11,7 @@ for x in files:
 #file.write(text)
 #file.close()
 
-#vergleich(text)
-
+# vergleich(text)
 
 
 """
@@ -35,4 +34,3 @@ cv2.imshow('Images/test_text.png', bild)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 """
-
