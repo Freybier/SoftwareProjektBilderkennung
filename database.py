@@ -15,3 +15,12 @@ def initialize_database():
 
     if result == x:
         my_cursor.execute("CREATE DATABASE notenuebersicht")
+
+def erstelle_tabelle(name):
+    my_db = mysql.connector.connect(
+        host="localhost",
+        user="root",
+        database="notenuebersicht",
+        password="password"
+    )
+    my_cursor = my_db.cursor()
