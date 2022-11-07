@@ -1,7 +1,7 @@
 def vergleich(text):
     counter = 0
-    original = open("original_text.txt", "r")
-    vergleichstext = open("demo.txt", "r")
+    original = open("Texts/original_text.txt", "r")
+    vergleichstext = open("Texts/demo.txt", "r")
 
     for o_line in original.readlines():
         v_line = vergleichstext.readline()
