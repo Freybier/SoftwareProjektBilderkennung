@@ -3,18 +3,18 @@ from gui import *
 from auslesen import *
 from database import *
 
-initialize_database()
+#initialize_database()
 
 files = dateizug()
 
 for x in files:
     text = auslese(x)
 
-#file = open("demo.txt", "w")
+#file = open("Texts/demo.txt", "w")
 #file.write(text)
 #file.close()
 
-# vergleich(text)
+#vergleich(text)
 
 
 """
