@@ -1,30 +1,52 @@
 import pytesseract
 import PIL.Image
 import cv2
+from vergleich import *
+import numpy as np
 
 myconfig = r"--psm 6 --oem 3"
 
 
 def auslese(file):
-    #text = pytesseract.image_to_string(PIL.Image.open(file), config=myconfig, lang="deu")
-    #print(text)
 
     # Grayscale, Otsu's threshold
     image = cv2.imread(file)
+
+    """
+    #man könnte die mail adresse zuerst als schwarz masken, und dann alle anderen zwischenfarbtöne auf weiß
+    
+    hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+
+    # upper and lower limits
+    white_lo = np.array([50, 50, 50])
+    white_hi = np.array([120, 200, 200])
+
+    # mask
+    mask = cv2.inRange(hsv, white_lo, white_hi)
+
+    # change image to white where not fully black
+    image[mask>0] = (255, 255, 255)
+    """
+
     gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
     thresh = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)[1]
 
-    #invert image
-    kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
+    # invert image
+    # kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
     invert = 255 - thresh
 
     # Perform text extraction
     text = pytesseract.image_to_string(invert, lang='deu', config=myconfig)
-    print(text)
+    vergl = open("Texts/demo.txt", "w")
+    vergl.write(text)
+    vergl.close()
+    vergleich(vergl)
 
-    cv2.imshow('thresh', thresh)
     cv2.imshow('image', image)
+    cv2.imshow('gray', gray)
+    cv2.imshow('binary', thresh)
     cv2.imshow('invert', invert)
+
     cv2.waitKey()
 
     return text
