@@ -1,160 +1,20 @@
-1334815
-1796521
-1917257
-1628037
-1702582
-1702571
-1382627
-1250163
-1693257
-2457924
-1457893
-1938475
+660044 IIM-119-D1 Labor Algorithmen und Datenstrukturen Gakar
 
-‚Aschenbrenner, Jakob
-Vergesslich, Klaus
-Vergesslich, Peter
-Vergesslich, Ömer
-Alman, Slimani
-Alman, Mohamed
-Alman, Nida
-Beutlin, Bilbo
-Beutlin, Gandalf
-Beutlin, Galadriel
-Beutlin, Sammy
-Honda, Keisuke
+startHissheet endHissheet
 
-500
-500
-500
-500
-500
-500
-500
-500
-500
-500
-500
-500
+mtknr sortname bewertung pstatus  pversuch kit spversion semester pdatum pnr bonus labnr Pordnr  porgnr Mail
 
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-
-PFunrunnreenw
-
-M-IIM
-M-IIM
-M-IIM
-M-IIM
-M-IIM
-M-IIM
-M-IIM
-M-IIM
-M-IIM
-M-IIM
-M-IIM
-M-IIM
-
-20192
-20192
-20192
-20192
-20192
-20192
-20192
-20192
-20192
-20192
-20192
-20192
-
-20212
-20212
-20212
-20212
-20212
-20212
-20212
-20212
-20212
-20212
-20212
-20212
-
-17.01.2022
-17.01.2022
-17.01.2022
-17.01.2022
-17.01.2022
-17.01.2022
-17.01.2022
-17.01.2022
-17.01.2022
-17.01.2022
-17.01.2022
-17.01.2022
-
-649352
-649352
-649352
-649352
-649352
-649352
-649352
-649352
-649352
-649352
-649352
-649352
-
-ooooooooo000
-
-3369510
-3369510
-3369510
-3369510
-3369510
-3369510
-3369510
-3369510
-3369510
-3369510
-3369510
-3369510
-
-53225
-53225
-53225
-53225
-53225
-53225
-53225
-53225
-53225
-53225
-53225
-53225
-
-204220
-204220
-204220
-204220
-204220
-204220
-204220
-204220
-204220
-204220
-204220
-204220
+3838383 Friase, Sina 400 AN 1 MM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 sinafriese@stud.hs-hannover.de
+1036272 Prinz, Birgit 200 An 1 MM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 _ birgit.prinz@stud.hs-hannover.de
+1026374 Fray,Luki 300 An 1 MM 20192 20212 17.01.2022 649352 0 3369510 53225 204220  luki.fray@stud.hs-hannover.de
+1926437 Aurum, Hugo 400 An 1 MM 20192 20212 17.01.2022 649352 0 3369510 53225 204220  hugo.aurum@stud.hs-hannover.de
+1257245 Ketchup, Ash 100 An 1 MM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 _ ash.ketchup@stud.hs-hannaver.de
+1582021 Keleher, Siobhan 300 An 1 MM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 _ siobhan.keleher@stud.hs-hannover.de
+1680234 Find, Nemo 370 An 1 MM 20192 20212 17.01.2022 649352 0 3369510 53225 204220  nemofind@stud.hs-hannover.de
+1937643 Poll, Lea 200 An 1 MM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 Iea.nall@stud.hs-hannover.de
+3454235 Kopf,Serkan 400 An 1 MM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 _ serkan.kopf@stud.hs-hannover.de
+1467634 Loch,Annika 270 An 1 MM 20192 20212 17.01.2022 649352 0 3369510 53225 204220  annika.loch@stud.hs-hannover.de
+2323451 Grab,Hannelie 500 An 1 MM 20192 20212 17.01.2022 649352 0 3369510 53225 204220  hannelie.grab@stud.hs-hannover.de
+1938475 von-Felde, Pia 300 An 1 MM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 _ piawon-felde@stud.hs-hannover.de
+endHiSsheet.
 

@@ -1,6 +1,6 @@
 def vergleich(file):
     counter = 0
-    original = open("Texts/tabelle4.txt", "r")
+    original = open("Texts/tabelle8.txt", "r")
     vergleichstext = open("Texts/demo.txt", "r")
 
     for o_line in original.readlines():
