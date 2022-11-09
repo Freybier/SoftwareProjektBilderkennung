@@ -1,4 +1,3 @@
-from vergleich import *
 from gui import *
 from auslesen import *
 from database import *
@@ -9,12 +8,11 @@ files = dateizug()
 
 for x in files:
     text = auslese(x)
+    print(text)
 
-#file = open("Texts/demo.txt", "w")
-#file.write(text)
-#file.close()
-
-#vergleich(text)
+# myconfig = r"--psm 1 --oem 3"
+# text = pytesseract.image_to_string(PIL.Image.open("Images/Tabelle8.png"), config=myconfig, lang="deu")
+# print(text)
 
 
 """

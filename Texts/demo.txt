@@ -1,12 +1,160 @@
-Mat. Nr. Name Fach Note Versuch Angetreten
-000001 Li, Huen Elektr. Tech. 13 ja
-000002 Eraslan, Cem Elektr. Tech. 40 2ja
-000003 du Pont, Jean-Jaque Elektr. Tech. 5.0 INGR
-000004 Frisch, Moritz Elektr. Tech. 5.0 ja
-000005 Minh, Nguyen Elektr. Tech. 17 2ja
-000006 Roy, Siegfried und Elektr. Tech. 3.7 3ja
-000007 Bewölkt, Stark Elektr. Tech. 23 2ja
-000008 Sonnenkönig, Der Elektr. Tech. 27 ja
-1000009 Strauß, Engelbert Elektr. Tech. 10 ja
-000010 Gustav, Franz Elektr. Tech. 3.0 ja
+1334815
+1796521
+1917257
+1628037
+1702582
+1702571
+1382627
+1250163
+1693257
+2457924
+1457893
+1938475
+
+‚Aschenbrenner, Jakob
+Vergesslich, Klaus
+Vergesslich, Peter
+Vergesslich, Ömer
+Alman, Slimani
+Alman, Mohamed
+Alman, Nida
+Beutlin, Bilbo
+Beutlin, Gandalf
+Beutlin, Galadriel
+Beutlin, Sammy
+Honda, Keisuke
+
+500
+500
+500
+500
+500
+500
+500
+500
+500
+500
+500
+500
+
+AN
+AN
+AN
+AN
+AN
+AN
+AN
+AN
+AN
+AN
+AN
+AN
+
+PFunrunnreenw
+
+M-IIM
+M-IIM
+M-IIM
+M-IIM
+M-IIM
+M-IIM
+M-IIM
+M-IIM
+M-IIM
+M-IIM
+M-IIM
+M-IIM
+
+20192
+20192
+20192
+20192
+20192
+20192
+20192
+20192
+20192
+20192
+20192
+20192
+
+20212
+20212
+20212
+20212
+20212
+20212
+20212
+20212
+20212
+20212
+20212
+20212
+
+17.01.2022
+17.01.2022
+17.01.2022
+17.01.2022
+17.01.2022
+17.01.2022
+17.01.2022
+17.01.2022
+17.01.2022
+17.01.2022
+17.01.2022
+17.01.2022
+
+649352
+649352
+649352
+649352
+649352
+649352
+649352
+649352
+649352
+649352
+649352
+649352
+
+ooooooooo000
+
+3369510
+3369510
+3369510
+3369510
+3369510
+3369510
+3369510
+3369510
+3369510
+3369510
+3369510
+3369510
+
+53225
+53225
+53225
+53225
+53225
+53225
+53225
+53225
+53225
+53225
+53225
+53225
+
+204220
+204220
+204220
+204220
+204220
+204220
+204220
+204220
+204220
+204220
+204220
+204220
 
