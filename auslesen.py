@@ -3,6 +3,7 @@ import PIL.Image
 import cv2
 from vergleich import *
 import numpy as np
+from csv_converter import *
 
 myconfig = r"--psm 6 --oem 3"
 
@@ -37,10 +38,12 @@ def auslese(file):
 
     # Perform text extraction
     text = pytesseract.image_to_string(invert, lang='deu', config=myconfig)
+    convert(text)
+
     vergl = open("Texts/demo.txt", "w")
     vergl.write(text)
     vergl.close()
-    vergleich(vergl)
+    # vergleich(vergl)
 
     cv2.imshow('image', image)
     cv2.imshow('gray', gray)
