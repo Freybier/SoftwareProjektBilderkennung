@@ -1,6 +1,5 @@
 import PySimpleGUI as sg
 
-
 def dateizug():
     sg.theme('DarkAmber')
 

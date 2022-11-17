@@ -10,10 +10,10 @@ for x in files:
     text = auslese(x)
     print(text)
 
-# myconfig = r"--psm 1 --oem 3"
-# text = pytesseract.image_to_string(PIL.Image.open("Images/Tabelle8.png"), config=myconfig, lang="deu")
-# print(text)
-
+    #for y in range(10):
+        #auslese(x)
+        #vergleich(x)
+csv_vergleich()
 
 """
 bild = cv2.imread("Images/test_text.png")
