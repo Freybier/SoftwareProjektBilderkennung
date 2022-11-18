@@ -41,7 +41,7 @@ def csv_vergleich():
             counter = counter + 1
 
             for x, y in zip(o_line, v_line):
-                if x != y :
+                if x != y:
 
                     print("Fehler in Zeile " + o_line)
                     print(x)

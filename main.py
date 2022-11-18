@@ -2,8 +2,8 @@ from gui import *
 from auslesen import *
 from database import *
 
-initialize_database()
-erstelle_tabelle("Algo")
+#initialize_database()
+#erstelle_tabelle("Algo")
 
 files = dateizug()
 
@@ -11,9 +11,9 @@ for x in files:
     text = auslese(x)
     print(text)
 
-    #for y in range(10):
-        #auslese(x)
-        #vergleich(x)
+    for y in range(100):
+        auslese(x)
+        vergleich(x)
 csv_vergleich()
 
 """
