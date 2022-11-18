@@ -2,7 +2,8 @@ from gui import *
 from auslesen import *
 from database import *
 
-#initialize_database()
+initialize_database()
+erstelle_tabelle("Algo")
 
 files = dateizug()
 
