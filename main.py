@@ -10,9 +10,9 @@ for x in files:
     text = auslese(x)
     print(text)
 
-    #for y in range(10):
-        #auslese(x)
-        #vergleich(x)
+    for y in range(100):
+        auslese(x)
+        vergleich(x)
 csv_vergleich()
 
 """
