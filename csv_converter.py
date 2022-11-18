@@ -35,3 +35,4 @@ def convert(text):
             else:
                 csv_converted.write(f"\"{word}\"")
         csv_converted.write("\n")
+    csv_converted.close()
