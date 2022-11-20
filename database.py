@@ -1,3 +1,10 @@
+def test(csv1):
+    anzahl = csv1.get_anzahl_zeilen()
+    print(anzahl)
+    kurs = csv1.get_kurs()
+    print(kurs)
+    dozent = csv1.get_dozent()
+    print(dozent)
 # import mysql.connector
 #
 #

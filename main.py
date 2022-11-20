@@ -6,15 +6,14 @@ from database import *
 #erstelle_tabelle("Algo")
 
 files = dateizug()
+csv1 = CSVObject()
 
 for x in files:
     text = auslese(x)
-    #print(text)
+    csv1.convert(text)
 
-    for y in range(0):
-        auslese(x)
-        #vergleich(x)
-#csv_vergleich()
+
+test(csv1)
 
 """
 bild = cv2.imread("Images/test_text.png")
