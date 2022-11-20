@@ -9,12 +9,12 @@ files = dateizug()
 
 for x in files:
     text = auslese(x)
-    print(text)
+    #print(text)
 
-    for y in range(100):
+    for y in range(0):
         auslese(x)
-        vergleich(x)
-csv_vergleich()
+        #vergleich(x)
+#csv_vergleich()
 
 """
 bild = cv2.imread("Images/test_text.png")
