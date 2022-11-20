@@ -12,6 +12,7 @@ def convert(text):
         if first_line:
             first_line = False
             fach_dozent(line)
+            counter_lines = counter_lines + 1
             continue
         words = lines[counter_lines].split()
         counter_lines = counter_lines + 1
@@ -20,8 +21,7 @@ def convert(text):
         name = ""
         if line == "":
             continue
-        if re.search(line, "startHissheet endHissheet", re.IGNORECASE) or re.search(line, "endHissheet.",
-                                                                                    re.IGNORECASE):
+        if re.search(line, "startHissheet endHissheet", re.IGNORECASE) or re.search(line, "endHiSsheet.", re.IGNORECASE):
             continue
         for word in words:
             if word == "_":
@@ -45,7 +45,8 @@ def convert(text):
                 csv_converted.write(f"\"{word}\",")
             else:
                 csv_converted.write(f"\"{word}\"")
-        csv_converted.write("\n")
+        if len(lines) != counter_lines:
+            csv_converted.write("\n")
     csv_converted.close()
 
 
