@@ -1,5 +1,5 @@
 import re
-
+import csv
 
 class CSVObject:
 
@@ -33,6 +33,7 @@ class CSVObject:
             name = ""
             if line == "":
                 continue
+            #in case of gelesenen sonderzeichen, blockiere den Eintrag(möglich mit ganzen wörtern oder mit nur sonderzeichen die sich dazwischen gemogelt hat(regex))
             if re.search(line, "startHissheet endHissheet", re.IGNORECASE) or re.search(line, "endHiSsheet.",
                                                                                         re.IGNORECASE):
                 continue
@@ -63,6 +64,7 @@ class CSVObject:
                 self.counter_input = self.counter_input + 1
 
         csv_converted.close()
+        self.csv_to_txt()
 
     def fach_dozent(self, line):
         first, *middle, last = line.split()
@@ -79,3 +81,9 @@ class CSVObject:
 
     def get_kurs(self):
         return self.kurs
+
+    def csv_to_txt(self):
+        with open("Texts/csvText.txt", "w") as my_output_file:
+            with open("CSV/csvTest.csv", "r") as my_input_file:
+                [my_output_file.write(" ".join(row)+'\n') for row in csv.reader(my_input_file)]
+            my_output_file.close()
