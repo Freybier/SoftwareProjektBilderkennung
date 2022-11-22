@@ -3,7 +3,8 @@ from auslesen import *
 from database import *
 
 #initialize_database()
-#erstelle_tabelle("Algo")
+loesche_tabelle("Tabelle")
+erstelle_tabelle("Tabelle")
 
 files = dateizug()
 csv1 = CSVObject()
@@ -12,7 +13,11 @@ for x in files:
     text = auslese(x)
     csv1.convert(text)
 
-text_vergleich("Texts/tabelle8_csv.txt", "Texts/csvText.txt")
+fach = csv1.get_kurs()
+doz = csv1.get_dozent()
+
+einlesen(fach, doz)
+#text_vergleich("Texts/tabelle8_csv.txt", "Texts/csvText.txt")
 #test(csv1)
 
 """
