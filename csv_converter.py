@@ -34,8 +34,7 @@ class CSVObject:
             if line == "":
                 continue
             #in case of gelesenen sonderzeichen, blockiere den Eintrag(möglich mit ganzen wörtern oder mit nur sonderzeichen die sich dazwischen gemogelt hat(regex))
-            if re.search(line, "startHissheet endHissheet", re.IGNORECASE) or re.search(line, "endHiSsheet.",
-                                                                                        re.IGNORECASE):
+            if re.search(line, "startHissheet endHissheet", re.IGNORECASE) or re.search(line, "endHiSsheet.",re.IGNORECASE):
                 continue
             for word in words:
                 if word == "_":

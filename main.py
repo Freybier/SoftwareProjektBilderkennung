@@ -12,8 +12,8 @@ for x in files:
     text = auslese(x)
     csv1.convert(text)
 
-
-test(csv1)
+text_vergleich("Texts/tabelle8_csv.txt", "Texts/csvText.txt")
+#test(csv1)
 
 """
 bild = cv2.imread("Images/test_text.png")
