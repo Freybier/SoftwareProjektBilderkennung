@@ -25,7 +25,8 @@ class CSVObject:
                     first_line = False
                     self.kurs = gui.get_kurs()
                     self.dozent = gui.get_dozent()
-                    #continue
+                    counter_lines = counter_lines + 1
+                    continue
                 else:
                     first_line = False
                     self.fach_dozent(line)
