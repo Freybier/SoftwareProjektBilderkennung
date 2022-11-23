@@ -3,17 +3,29 @@ from auslesen import *
 from database import *
 
 #initialize_database()
+#loesche_tabelle("Tabelle")
+#erstelle_tabelle("Tabelle")
 
-files = dateizug()
+gui1 = Gui()
+files = gui1.dateizug()
+
+kurs_eingabe = gui1.get_kurs()
+dozent_eingabe = gui1.get_dozent()
+
+csv1 = CSVObject()
 
 for x in files:
     text = auslese(x)
-    print(text)
+    csv1.convert(text, gui1)
 
-# myconfig = r"--psm 1 --oem 3"
-# text = pytesseract.image_to_string(PIL.Image.open("Images/Tabelle8.png"), config=myconfig, lang="deu")
-# print(text)
+fach = csv1.get_kurs()
+doz = csv1.get_dozent()
 
+print(fach, doz)
+
+#einlesen(fach, doz)
+#text_vergleich("Texts/tabelle8_csv.txt", "Texts/csvText.txt")
+#test(csv1)
 
 """
 bild = cv2.imread("Images/test_text.png")

@@ -1,9 +1,5 @@
-660044 IIM-119-01 Labor Algorithmen und Datenstrukturen Gakar
-
 startHissheet endHissheet
-
 mtknr sortname bewertung pstatus —pversuch txt spversion semester pdatum = pir bonus labnr pordnr = porgrr Mail
-
 3838383 Friese, Sina 400 AN 1 MAM 20192 20212 17.01.2022 649352 O 3369510 53225 204220 _sina.friese@stud.hs-hannover.ce
 1036272 — Prinz, Birgit 200 AN 1 MAM 20192 20212 17.01.2022 649352 O 3369510 53225 204220 birgit.prinzGstud.hs.hannoverde
 1026374 Fray, Luki 300 AN 1 MAM 20192 20212 17.01.2022 649352 O 3369510 53225 204220 luki.fray@stud.hs-hannover.de
@@ -17,4 +13,3 @@ mtknr sortname bewertung pstatus —pversuch txt spversion semester pdatum = pir
 2323451 Grab, Hannelie 500 AN 1 MAM 20192 20212 17.01.2022 649352 O 3369510 53225 204220 _—hannelie.grab@stud.hs-hannover.de
 1938475 — vom-elde,Pia © 300 AN 1 MAM 20192 20212 17.01.2022 649352 O 3369510 53225 204220 _pia.von-felde@stud hs-hannover.de
 endHissheet
-
