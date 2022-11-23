@@ -39,10 +39,10 @@ class CSVObject:
             if line == "":
                 continue
             #in case of gelesenen sonderzeichen, blockiere den Eintrag(möglich mit ganzen wörtern oder mit nur sonderzeichen die sich dazwischen gemogelt hat(regex))
-            #if re.search(line, "startHissheet endHissheet", re.IGNORECASE) or re.search(line, "endHiSsheet.",re.IGNORECASE):
-            #    continue
+            if re.search(line, "startHissheet endHissheet", re.IGNORECASE) or re.search(line, "endHiSsheet",re.IGNORECASE) or re.search(line, "endHiSsheet.",re.IGNORECASE):
+                continue
             for word in words:
-                if word == "_":
+                if word == "_" or word == "-" or word == "—" or word == "=":
                     counter_words = counter_words + 1
                     continue
                 for char in word:
