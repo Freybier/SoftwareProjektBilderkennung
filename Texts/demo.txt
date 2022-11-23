@@ -1,20 +1,20 @@
-660044 IIM-119-D1 Labor Algorithmen und Datenstrukturen Gakar
+660044 IIM-119-01 Labor Algorithmen und Datenstrukturen Gakar
 
 startHissheet endHissheet
 
-mtknr sortname bewertung pstatus  pversuch kit spversion semester pdatum pnr bonus labnr Pordnr  porgnr Mail
+mtknr sortname bewertung pstatus —pversuch txt spversion semester pdatum = pir bonus labnr pordnr = porgrr Mail
 
-3838383 Friase, Sina 400 AN 1 MAM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 sinafriese@stud.hs-hannover.de
-1036272 Prinz, Birgit 200 AN 1 MAM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 _ birgit.prinz@stud.hs-hannover.de
-1026374 Fray,Luki 300 AN 1 MAM 20192 20212 17.01.2022 649352 0 3369510 53225 204220  luki.fray@stud.hs-hannover.de
-1926437 Aurum, Hugo 400 AN 1 MAM 20192 20212 17.01.2022 649352 0 3369510 53225 204220  hugo.aurum@stud.hs-hannover.de
-1257245 Ketchup, Ash 100 AN 1 MAM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 _ ash.ketchup@stud.hs-hannaver.de
-1582021 Keleher, Siobhan 300 AN 1 MAM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 _ siobhan.keleher@stud.hs-hannover.de
-1680234 Find, Nemo 370 AN 1 MAM 20192 20212 17.01.2022 649352 0 3369510 53225 204220  nemofind@stud.hs-hannover.de
-1937643 Poll, Lea 200 AN 1 MAM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 Iea.nall@stud.hs-hannover.de
-3454235 Kopf,Serkan 400 AN 1 MAM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 _ serkan.kopf@stud.hs-hannover.de
-1467634 Loch,Annika 270 AN 1 MAM 20192 20212 17.01.2022 649352 0 3369510 53225 204220  annika.loch@stud.hs-hannover.de
-2323451 Grab,Hannelie 500 AN 1 MAM 20192 20212 17.01.2022 649352 0 3369510 53225 204220  hannelie.grab@stud.hs-hannover.de
-1938475 von-Felde, Pia 300 AN 1 MAM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 _ piawon-felde@stud.hs-hannover.de
-endHiSsheet.
+3838383 Friese, Sina 400 AN 1 MAM 20192 20212 17.01.2022 649352 O 3369510 53225 204220 _sina.friese@stud.hs-hannover.ce
+1036272 — Prinz, Birgit 200 AN 1 MAM 20192 20212 17.01.2022 649352 O 3369510 53225 204220 birgit.prinzGstud.hs.hannoverde
+1026374 Fray, Luki 300 AN 1 MAM 20192 20212 17.01.2022 649352 O 3369510 53225 204220 luki.fray@stud.hs-hannover.de
+1926437 — Aurum,Hugo 400 AN 1 MAM 20192 20212 17.01.2022 649352 O 3369510 53225 204220 © hugo aurumdastud.hs-hannoverde
+1257245 Ketchup, Ash 100 AN 1 MAM 20192 20212 17.01.2022 649352 O 3369510 53225 204220 ash ketchup@studl.hs-hannover.de
+1582021 Keleher, Siobhan 300 AN 1 MAM 20192 20212 17.01.2022 649352 O 3369510 53225 204220 sigbhan.keleher@stud.hs-hannover.de
+1680234 Find, Nemo 370 AN 1 MAM 20192 20212 17.01.2022 649352 O 3369510 53225 204220 nemo find@stud.hs-hannover.de
+1937643 Poll, Lea 200 AN 1 MAM 20192 20212 17.01.2022 649352 O 3369510 53225 204220 lea,pall(östud.hshannoverde
+3454235 Kopf,Serkan 400 AN 1 MAM 20192 20212 17.01.2022 649352 O 3369510 53225 204220 serkan.kopf@stud.hs-hannover.de
+1467634 Loch, Annika 270 AN 1 MAM 20192 20212 17.01.2022 649352 O 3369510 53225 204220 annika Joch@stud.hs-hannover.de
+2323451 Grab, Hannelie 500 AN 1 MAM 20192 20212 17.01.2022 649352 O 3369510 53225 204220 _—hannelie.grab@stud.hs-hannover.de
+1938475 — vom-elde,Pia © 300 AN 1 MAM 20192 20212 17.01.2022 649352 O 3369510 53225 204220 _pia.von-felde@stud hs-hannover.de
+endHissheet
 
