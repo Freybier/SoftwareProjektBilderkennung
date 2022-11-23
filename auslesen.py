@@ -41,14 +41,14 @@ def auslese(file):
     invert = 255 - thresh
 
     # Perform text extraction
-    text = pytesseract.image_to_string(invert, lang='eng+tur', config=myconfig)
+    text = pytesseract.image_to_string(invert, lang='deu+tur', config=myconfig)
 
 
 
     vergl = open("Texts/demo.txt", "w")
     vergl.write(text)
     vergl.close()
-    # vergleich(vergl)
+    #vergleich(vergl)
 
     #cv2.imshow('image', image)
     #cv2.imshow('gray', gray)
