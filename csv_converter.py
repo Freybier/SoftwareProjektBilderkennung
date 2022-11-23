@@ -12,9 +12,8 @@ class CSVObject:
         self.dozent = ""
         self.kurs = ""
 
-    def convert(self, text):
+    def convert(self, text, gui):
         csv_converted = open("CSV/csvTest.csv", "w")
-        counter_input = 0
         lines = text.split("\n")
         counter_lines = 0
 
@@ -22,10 +21,16 @@ class CSVObject:
 
         for line in lines:
             if first_line:
-                first_line = False
-                self.fach_dozent(line)
-                counter_lines = counter_lines + 1
-                continue
+                if gui.get_kurs() != "" and gui.get_dozent() != "":
+                    first_line = False
+                    self.kurs = gui.get_kurs()
+                    self.dozent = gui.get_dozent()
+                    #continue
+                else:
+                    first_line = False
+                    self.fach_dozent(line)
+                    counter_lines = counter_lines + 1
+                    continue
             words = lines[counter_lines].split()
             counter_lines = counter_lines + 1
             counter_words = 0
@@ -34,8 +39,8 @@ class CSVObject:
             if line == "":
                 continue
             #in case of gelesenen sonderzeichen, blockiere den Eintrag(möglich mit ganzen wörtern oder mit nur sonderzeichen die sich dazwischen gemogelt hat(regex))
-            if re.search(line, "startHissheet endHissheet", re.IGNORECASE) or re.search(line, "endHiSsheet.",re.IGNORECASE):
-                continue
+            #if re.search(line, "startHissheet endHissheet", re.IGNORECASE) or re.search(line, "endHiSsheet.",re.IGNORECASE):
+            #    continue
             for word in words:
                 if word == "_":
                     counter_words = counter_words + 1

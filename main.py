@@ -3,20 +3,27 @@ from auslesen import *
 from database import *
 
 #initialize_database()
-loesche_tabelle("Tabelle")
-erstelle_tabelle("Tabelle")
+#loesche_tabelle("Tabelle")
+#erstelle_tabelle("Tabelle")
 
-files = dateizug()
+gui1 = Gui()
+files = gui1.dateizug()
+
+kurs_eingabe = gui1.get_kurs()
+dozent_eingabe = gui1.get_dozent()
+
 csv1 = CSVObject()
 
 for x in files:
     text = auslese(x)
-    csv1.convert(text)
+    csv1.convert(text, gui1)
 
 fach = csv1.get_kurs()
 doz = csv1.get_dozent()
 
-einlesen(fach, doz)
+print(fach, doz)
+
+#einlesen(fach, doz)
 #text_vergleich("Texts/tabelle8_csv.txt", "Texts/csvText.txt")
 #test(csv1)
 
