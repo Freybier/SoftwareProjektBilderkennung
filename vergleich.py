@@ -1,8 +1,28 @@
-def vergleich(file):
+def text_vergleich(original_pfad, vergleich_pfad):
     counter = 0
-    original = open("Texts/tabelle8.txt", "r")
-    vergleichstext = open("Texts/demo.txt", "r")
+    original = open(original_pfad, "r")
+    vergleichstext = open(vergleich_pfad, "r")
 
+    for o_line in original.readlines():
+        v_line = vergleichstext.readline()
+
+        print(o_line +"\n" + v_line + "\n\n")
+
+        if len(o_line) != len(v_line):
+            print("unterschiedliche Länge der Zeile")
+            if len(o_line) > len(v_line):
+                print("Hier fehlt was")
+        else:
+            for x, y in zip(o_line, v_line):
+                if x != y:
+                    if x == "\t" and y == " " or x == " " and y == "\t":
+                        continue
+                    print("Fehler")
+                    counter = counter + 1
+
+
+
+    """
     for o_line in original.readlines():
         v_line = vergleichstext.readline()
 
@@ -24,5 +44,26 @@ def vergleich(file):
                 print("Fehler in Zeile: " + v_line + " im Wort " + v_w_line[i] + "\n")
                 print("\n")
                 counter += 1
+    """
+    print(f"Es gibt insgesamt {counter} Fehler")
+
+
+def csv_vergleich():
+    counter = 0
+    original = open("CSV/tabelle8.csv", "r")
+    eingelesen = open("CSV/csvTest.csv", "r")
+
+    for o_line in original.readlines():
+        v_line = eingelesen.readline()
+
+        if o_line != v_line:
+            print("Es gibt einen Fehler in Zeile " + v_line)
+            counter = counter + 1
+
+            for x, y in zip(o_line, v_line):
+                if x != y:
+
+                    print("Fehler in Zeile " + o_line)
+                    print(x)
 
     print(f"Es gibt insgesamt {counter} Fehler")
