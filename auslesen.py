@@ -43,8 +43,6 @@ def auslese(file):
     # Perform text extraction
     text = pytesseract.image_to_string(invert, lang='deu+tur', config=myconfig)
 
-
-
     vergl = open("Texts/demo.txt", "w")
     vergl.write(text)
     vergl.close()

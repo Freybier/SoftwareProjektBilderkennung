@@ -3,8 +3,8 @@ from auslesen import *
 from database import *
 
 #initialize_database()
-loesche_tabelle("Tabelle")
-erstelle_tabelle("Tabelle")
+#loesche_tabelle("Tabelle")
+#erstelle_tabelle("Tabelle")
 
 gui1 = Gui()
 files = gui1.dateizug()
@@ -23,7 +23,7 @@ doz = csv1.get_dozent()
 
 print(fach, doz)
 
-einlesen(fach, doz)
+#einlesen(fach, doz)
 #text_vergleich("Texts/tabelle8_csv.txt", "Texts/csvText.txt")
 #test(csv1)
 
