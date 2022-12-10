@@ -3,8 +3,8 @@ from auslesen import *
 from database import *
 
 #initialize_database()
-loesche_tabelle("Tabelle")
-erstelle_tabelle("Tabelle")
+#loesche_tabelle("Tabelle")
+#erstelle_tabelle("Tabelle")
 
 gui1 = Gui()
 files = gui1.dateizug()
@@ -14,18 +14,18 @@ dozent_eingabe = gui1.get_dozent()
 
 csv1 = CSVObject()
 
+
+
 for x in files:
     text = auslese(x)
-    csv1.convert(text, gui1)
+    #csv1.convert(text, gui1)
+    compare_files("Texts/tabelle8.txt", "Texts/vergleich_test_tabelle8.txt")
+    fach = csv1.get_kurs()
+    doz = csv1.get_dozent()
 
-fach = csv1.get_kurs()
-doz = csv1.get_dozent()
+    print(fach, doz)
 
-print(fach, doz)
-
-einlesen(fach, doz)
-#text_vergleich("Texts/tabelle8_csv.txt", "Texts/csvText.txt")
-#test(csv1)
+    #einlesen(fach, doz)
 
 """
 bild = cv2.imread("Images/test_text.png")
