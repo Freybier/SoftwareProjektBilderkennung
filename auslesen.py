@@ -41,10 +41,10 @@ def auslese(file):
     invert = 255 - thresh
 
     # Perform text extraction
-    text = pytesseract.image_to_string(invert, lang='deu+eng', config=myconfig)
-    #text = pytesseract.image_to_string(image, lang='deu+eng', config=myconfig)
 
     #cropped_image = invert[60:80]
+    text = pytesseract.image_to_string(invert, lang='deu+tur', config=myconfig)
+
 
     vergl = open("Texts/demo.txt", "w")
     vergl.write(text)

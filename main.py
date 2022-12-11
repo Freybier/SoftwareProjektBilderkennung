@@ -27,6 +27,7 @@ for x in files:
 
     #einlesen(fach, doz)
 
+
 """
 bild = cv2.imread("Images/test_text.png")
 height, width, _ = bild.shape

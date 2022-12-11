@@ -13,7 +13,7 @@ class CSVObject:
         self.kurs = ""
 
     def convert(self, text, gui):
-        csv_converted = open("CSV/csvTest.csv", "w")
+        csv_converted = open("/home/yannl/PycharmProjects/pythonProject/SoftwareProjektBilderkennung/CSV/csvTest.csv", "w")
         lines = text.split("\n")
         counter_lines = 0
 
