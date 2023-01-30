@@ -41,7 +41,10 @@ def auslese(file):
     invert = 255 - thresh
 
     # Perform text extraction
-    text = pytesseract.image_to_string(invert, lang='deu+tur+eng', config=myconfig)
+
+    #cropped_image = invert[60:80]
+    text = pytesseract.image_to_string(invert, lang='deu+tur', config=myconfig)
+
 
     vergl = open("Texts/demo.txt", "w")
     vergl.write(text)
@@ -51,9 +54,13 @@ def auslese(file):
     #cv2.imshow('image', image)
     #cv2.imshow('gray', gray)
     #cv2.imshow('binary', thresh)
-    #cv2.imshow('invert', invert)
+    #cv2.imshow('cropped', cropped_image)
+    #cv2.imwrite("Images/binary_spalten.png", cropped_image)
 
-    #cv2.waitKey()
+    cv2.imshow('invert', invert)
+    cv2.imwrite("Images/binary_alphabet.png", invert)
+
+    cv2.waitKey()
 
     return text
 
