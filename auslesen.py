@@ -5,7 +5,7 @@ from vergleich import *
 import numpy as np
 from csv_converter import *
 
-myconfig = r"--psm 6 --oem 3"
+myconfig = r"--psm 6 --oem 3 --user-words custom_words.txt"
 
 
 def auslese(file):
@@ -40,11 +40,20 @@ def auslese(file):
     # kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
     invert = 255 - thresh
 
+    #custom word list
+    with open('custom_words.txt', 'w') as f:
+        f.write('mtknr\nsortname\nbewertung\npstatus\npversuch\nktxt\nspversion\nsemester\npdatum\npnr\nbonus\nlabnr\npordnr\nporgnr\nMail\nstartHISsheet\nendHISsheet')
+
     # Perform text extraction
 
     #cropped_image = invert[60:80]
     text = pytesseract.image_to_string(invert, lang='deu+tur', config=myconfig)
 
+    hocr_output = pytesseract.image_to_pdf_or_hocr(invert, extension='hocr', lang='deu+tur', config=myconfig)
+    hocr = hocr_output.decode('utf-8')
+
+    with open('output.hocr', 'w') as f:
+        f.write(hocr)
 
     vergl = open("Texts/demo.txt", "w")
     vergl.write(text)
@@ -58,9 +67,8 @@ def auslese(file):
     #cv2.imwrite("Images/binary_spalten.png", cropped_image)
 
     cv2.imshow('invert', invert)
-    cv2.imwrite("Images/binary_alphabet.png", invert)
 
-    cv2.waitKey()
+    #cv2.waitKey()
 
     return text
 

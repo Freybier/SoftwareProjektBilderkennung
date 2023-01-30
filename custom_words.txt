@@ -1,0 +1,17 @@
+mtknr
+sortname
+bewertung
+pstatus
+pversuch
+ktxt
+spversion
+semester
+pdatum
+pnr
+bonus
+labnr
+pordnr
+porgnr
+Mail
+startHISsheet
+endHISsheet
