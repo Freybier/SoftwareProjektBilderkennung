@@ -41,7 +41,7 @@ def auslese(file):
     invert = 255 - thresh
 
     # Perform text extraction
-    text = pytesseract.image_to_string(invert, lang='deu+tur', config=myconfig)
+    text = pytesseract.image_to_string(invert, lang='deu+tur+eng', config=myconfig)
 
     vergl = open("Texts/demo.txt", "w")
     vergl.write(text)
