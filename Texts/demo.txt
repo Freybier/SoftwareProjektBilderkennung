@@ -17,4 +17,3 @@ mtknr sortname bewertung pstatus pversuch ktxt spversion semester pdatum pnr bon
 1457893 from-Success, Suffering 300 AN 3 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 suffering.from-success@stud.hs-hannover.de
 1938475 Honda, Keisuke 170 AN 1 M-IIM 20192 20212 17.01.2022 649352 o 3369510 53225 204220 keisuke.honda@stud.hs-hannover.de
 endHiSsheet
-
