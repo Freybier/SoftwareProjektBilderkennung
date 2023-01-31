@@ -46,7 +46,6 @@ def auslese(file):
 
     # Perform text extraction
 
-    #cropped_image = invert[60:80]
     text = pytesseract.image_to_string(invert, lang='deu+tur', config=myconfig)
 
     hocr_output = pytesseract.image_to_pdf_or_hocr(invert, extension='hocr', lang='deu+tur', config=myconfig)
