@@ -17,6 +17,8 @@ class CSVObject:
         lines = text.split("\n")
         counter_lines = 0
 
+        counter_spalten = 0
+
         first_line = True
 
         for line in lines:
@@ -35,14 +37,26 @@ class CSVObject:
             words = lines[counter_lines].split()
             counter_lines = counter_lines + 1
             counter_words = 0
+
             name_tag = False
             name = ""
             if line == "":
                 continue
-            #in case of gelesenen sonderzeichen, blockiere den Eintrag(möglich mit ganzen wörtern oder mit nur sonderzeichen die sich dazwischen gemogelt hat(regex))
-            if re.search(line, "startHissheet endHissheet", re.IGNORECASE) or re.search(line, "endHiSsheet",re.IGNORECASE) or re.search(line, "endHiSsheet.",re.IGNORECASE):
-                continue
+
+            prev_word = ""
+
             for word in words:
+                if word == "mtknr":
+                    counter_spalten = len(words)
+                    print(f"Es sollen {counter_spalten} spalten sein")
+
+                if word.endswith(".de") and len(words) != counter_spalten+1:
+                    print(f"{word} ist die e-mail addresse")
+                    csv_converted.write(f"\"{prev_word}" + f"{word}\",")
+                    counter_words = counter_words + 1
+                    break
+                if word == "startHISsheet" or word == "endHISsheet":
+                    break
                 if word == "_" or word == "-" or word == "—" or word == "=":
                     counter_words = counter_words + 1
                     continue
@@ -60,10 +74,15 @@ class CSVObject:
                     name = ""
                     counter_words = counter_words + 1
                     continue
+                if word == 'o':
+                    csv_converted.write('"0",')
+                    continue
                 if counter_words != len(words):
                     csv_converted.write(f"\"{word}\",")
                 else:
                     csv_converted.write(f"\"{word}\"")
+
+                prev_word = word
             if len(lines) != counter_lines:
                 csv_converted.write("\n")
                 self.counter_input = self.counter_input + 1
@@ -80,6 +99,9 @@ class CSVObject:
 
     def get_anzahl_zeilen(self):
         return self.counter_input
+
+    def get_anzahl_spalten(self):
+        return self.counter_spalten
 
     def get_dozent(self):
         return self.dozent
