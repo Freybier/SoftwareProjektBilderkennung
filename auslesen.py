@@ -41,7 +41,7 @@ def auslese(file):
     invert = 255 - thresh
 
     # Perform text extraction
-    text = pytesseract.image_to_string(invert, lang='eng+tur', config=myconfig)
+    text = pytesseract.image_to_string(invert, lang='eng+tur+deu', config=myconfig)
 
 
 
