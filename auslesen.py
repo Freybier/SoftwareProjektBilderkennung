@@ -15,7 +15,7 @@ def auslese(file):
 
     """
     hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
-    #kann man löschen Test
+
     # upper and lower limits
     white_lo = np.array([50, 50, 50])
     white_hi = np.array([120, 200, 200])
