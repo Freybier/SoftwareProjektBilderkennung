@@ -18,8 +18,8 @@ csv1 = CSVObject()
 
 for x in files:
     text = auslese(x)
-    #csv1.convert(text, gui1)
-    csv1.converter_neu(text, gui1)
+    csv1.convert(text, gui1)
+    #csv1.converter_neu(text, gui1)
     #compare_files("Texts/tabelle8.txt", "Texts/vergleich_test_tabelle8.txt")
     fach = csv1.get_kurs()
     doz = csv1.get_dozent()
@@ -42,6 +42,8 @@ with open("output.hocr", "r") as file:
                 word_end = line.find("<", word_start)
                 word = line[word_start:word_end]
                 print(f"x_wconf: {x_wconf}, Word: {word}")
+
+vergleich_csv_text()
 
 """
 bild = cv2.imread("Images/test_text.png")
