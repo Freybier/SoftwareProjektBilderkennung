@@ -1,7 +1,4 @@
-
-
 mtknr sortname bewertung pstatus pversuch ki spversion semester pdatum par bonus labnr pordnr porgnr Mail
-
 1334815 _Leymann, Yann 500" AN 3 MIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 _yann.eymann®szudhs-hannver.de
 1796521 Davor, Klaus 500 AN 7 MAM Oo 20192 20212 17.01.2022 649352 0 3369510 53225 201220kaus.davor@szud.hs-hannover.de
 1917257 0 Susac, Petar 300 AN 1 MIM 0 20192 20212 17.01.2022 649352 0 3369510 53225 204220 pezar.susac®szud,hs-hannover.de
@@ -20,7 +17,6 @@ mtknr sortname bewertung pstatus pversuch ki spversion semester pdatum par bonus
 1025473 Plüböm, Sheraldo 400 AN 1 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 shera do.puehoem®szud.hs-hannover.de
 1934573 Âais, Sidan 370 AN ı M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 5'dan.aea's®szud.hs-hannover.de
 1639465 Tri, Cera 370 AN 2 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 cera.:r'®szud.hs-hannover.de
-
 1209645 Löffel, Frauke 230 AN 2 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 frauke. oeffe®szud.hs-hannover.de
 1649063 Silie, Peter 200 AN 3 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 pezer.s''e®szud.hs-hannover.de
 1529737 Müller, Anna 700 AN ı M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 anna.mueer®szud.hs-hannover.de
@@ -29,4 +25,3 @@ mtknr sortname bewertung pstatus pversuch ki spversion semester pdatum par bonus
 1367894 Potter, Hans 100 AN ı M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 hans.pozer®szud.hs-hnover.de
 6455882 Akkus, Taylan 370 AN 2 M-IIM 20192 20212 17.01.2023 649352 0 3369510 53225 204220 zay an.akkus&szud.hs-hannover.de
 3445876 de Castellan, Joel 170 AN 3 M-IIM 20192 20212 17.01.2024 649352 0 3369510 53225 204220 joe .de-cas:ean®szud.hs-hannover.de
-

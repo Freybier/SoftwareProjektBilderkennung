@@ -9,5 +9,19 @@ mtknr	sortname	bewertung	pstatus	pversuch	ktxt	spversion	semester	pdatum	pnr	bon
 1250163	Döner, Mehmet	170	AN	3	M-IIM	20192	20212	17.01.2022	649352	0	3369510	53225	204220	mehmet.doener@stud.hs-hannover.de
 1693257	Römer, Aeneas	230	AN	1	M-IIM	20192	20212	17.01.2022	649352	0	3369510	53225	204220	aeneas.roemer@stud.hs-hannover.de
 2457924	Lonsdale, William	400	AN	2	M-IIM	20192	20212	17.01.2022	649352	0	3369510	53225	204220	william.lonsdale@stud.hs-hannover.de
-1457893	from-Success, Suffering	300	AN	3	M-IIM	20192	20212	17.01.2022	649352	0	3369510	53225	204220	suffering.from-success@stud.hs-hannover.de
+1457893	from Success, Suffering	300	AN	3	M-IIM	20192	20212	17.01.2022	649352	0	3369510	53225	204220	suffering.from-success@stud.hs-hannover.de
 1938475	Honda, Keisuke	170	AN	1	M-IIM	20192	20212	17.01.2022	649352	0	3369510	53225	204220	keisuke.honda@stud.hs-hannover.de
+1334815	Rünzel, Gobin	500	AN	3	M-IIM	20192	20212	17.01.2022	649352	0	3369510	53225	204220	gobin.ruenzel@stud.hs-hannver.de
+1432835	Malfoy, Tom	500	AN	2	M-IIM	20192	20212	17.01.2022	649352	0	3369510	53225	204220	tom.malfoy@stud.hs-hannover.de
+1835463	Smith, Hunter	130	AN	1	M-IIM	20192	20212	17.01.2022	649352	0	3369510	53225	204220	hunter.smith@stud.hs-hannover.de
+1025473	Plüböm, Sheraldo	400	AN	1	M-IIM	20192	20212	17.01.2022	649352	0	3369510	53225	204220	sheraldo.plueboem@stud.hs-hannover.de
+1934573	Äais, Sidan	370	AN	1	M-IIM	20192	20212	17.01.2022	649352	0	3369510	53225	204220	sidan.aeais@stud.hs-hannover.de
+1639465	Tri, Cera	370	AN	2	M-IIM	20192	20212	17.01.2022	649352	0	3369510	53225	204220	cera.tri@stud.hs-hannover.de
+1209645	Löffel, Frauke	230	AN	2	M-IIM	20192	20212	17.01.2022	649352	0	3369510	53225	204220	frauke.loeffel@stud.hs-hannover.de
+1649063	Silie, Peter	200	AN	3	M-IIM	20192	20212	17.01.2022	649352	0	3369510	53225	204220	peter.silie@stud.hs-hannover.de
+1529737	Müller, Anna	100	AN	1	M-IIM	20192	20212	17.01.2022	649352	0	3369510	53225	204220	anna.mueller@stud.hs-hannover.de
+1540758	Schmidt, Susanne	270	AN	2	M-IIM	20192	20212	17.01.2022	649352	0	3369510	53225	204220	susanne.schmidt@stud.hs-hannover.de
+1269046	Händler, Heribert	500	AN	3	M-IIM	20192	20212	17.01.2022	649352	0	3369510	53225	204220	heribert.haendler@stud.hs-hannover.de
+1367894	Potter, Hans	100	AN	1	M-IIM	20192	20212	17.01.2022	649352	0	3369510	53225	204220	hans.potter@stud.hs-hnover.de
+6455882	Akkus, Taylan	370	AN	2	M-IIM	20192	20212	17.01.2023	649352	0	3369510	53225	204220	taylan.akkus@stud.hs-hannover.de
+3445876	de Castellan, Joel	170	AN	3	M-IIM	20192	20212	17.01.2024	649352	0	3369510	53225	204220	joel.de-castellan@stud.hs-hannover.de
