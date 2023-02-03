@@ -41,7 +41,7 @@ class Gui:
             return files
         else:
             print("Ich hab keine Datei")
-            filename = "Images/test_text.png"
+            filename = "Trash_Images/test_text.png"
             files = filename.split(';')
             return files
 
