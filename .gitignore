@@ -1,4 +1,6 @@
 /.idea/
 /Texts/demo.txt
-/train/
+/Texts/csvText.txt
+/CSV/
 /Text-Extraction-Table-Image/
+/output.hocr
