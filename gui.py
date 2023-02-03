@@ -2,19 +2,23 @@ import PySimpleGUI as sg
 
 
 class Gui:
-
     dozent = ""
     kurs = ""
 
-
     def dateizug(self):
-        sg.theme('DarkAmber')
+        sg.theme('Dark')
 
         layout = [[sg.Text('Name des Dozenten'), sg.InputText()],
                   [sg.Text('Kurs'), sg.InputText()],
                   [sg.Button('Upload')],
                   [sg.Button('Vergleich')],
                   [sg.Button('Ok')]]
+
+        # layout = [[sg.Text('Name des Dozenten'), sg.InputText()],
+        #           [sg.Text('Kurs'), sg.InputText()],
+        #           [sg.FileBrowse(button_text="Upload"), sg.InputText("", key="-OUTPUT1-")],
+        #           [sg.FileBrowse(button_text="Vergleich"), sg.InputText("", key="-OUTPUT2-")],
+        #           [sg.Button('Ok')]]
 
         window = sg.Window('Bilderkennung', layout)
 
@@ -24,7 +28,7 @@ class Gui:
             if event == 'Upload':
                 self.files = self.filebrowser()
             if event == 'Vergleich':
-                    self.filebrowser2()
+                self.filebrowser2()
             if event in (sg.WIN_CLOSED, 'Ok'):
                 break
         self.dozent = values[0]
@@ -32,7 +36,6 @@ class Gui:
         window.close()
 
         return self.files
-
 
     def filebrowser(self):
         filename = sg.popup_get_file('Geben Sie eine Bilddatei an', multiple_files=True)
