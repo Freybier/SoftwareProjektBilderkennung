@@ -5,7 +5,7 @@ mtknr	sortname	bewertung	pstatus	pversuch	ktxt	spversion	semester	pdatum	pnr	bon
 1628037	Lange, Helene	500	AN	1	M-IIM	20192	20212	17.01.2022	649352	0	3369510	53225	204220	helene.lange@stud.hs-hannover.de
 1702582	Gause, Gundula	100	AN	1	M-IIM	20192	20212	17.01.2022	649352	0	3369510	53225	204220	gundula.gause@stud.hs-hannover.de
 1702571	Geiß, Robärt	100	AN	2	M-IIM	20192	20212	17.01.2022	649352	0	3369510	53225	204220	robaert.geiß@stud.hs-hannover.de
-1382627	im Glück, Hans	100	AN	2	M-IIM	20192	20212	17.01.2022	649352	0	3369510	53225	204220	hans.im-glueck@stud.hs-hannover.de
+1382627	im-Glück, Hans	100	AN	2	M-IIM	20192	20212	17.01.2022	649352	0	3369510	53225	204220	hans.im-glueck@stud.hs-hannover.de
 1250163	Döner, Mehmet	170	AN	3	M-IIM	20192	20212	17.01.2022	649352	0	3369510	53225	204220	mehmet.doener@stud.hs-hannover.de
 1693257	Römer, Aeneas	230	AN	1	M-IIM	20192	20212	17.01.2022	649352	0	3369510	53225	204220	aeneas.roemer@stud.hs-hannover.de
 2457924	Lonsdale, William	400	AN	2	M-IIM	20192	20212	17.01.2022	649352	0	3369510	53225	204220	william.lonsdale@stud.hs-hannover.de
