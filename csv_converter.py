@@ -95,7 +95,6 @@ class CSVObject:
         csv_converted2 = open("CSV/csvTest2.csv", "w")
         lines = text.split("\n")
         first_line2 = True
-        line_skipped = False
 
         for line in lines:
             if line == "\n" or line == "":
@@ -135,11 +134,13 @@ class CSVObject:
             elif words[i].endswith(".de") and len(words) != self.counter_spalten + 1:
                 for char in words[i]:
                     if char == '&':
-                        print("ich hab n falsches @")
-                        char = '@'
+                        words[i] = words[i].replace('&', '@')
                 words[i - 1] = f"{words[i - 1]}{words[i]}"
                 words[i] = None
-
+            elif words[i].endswith(".de"):
+                for char in words[i]:
+                    if char == '&':
+                        words[i] = words[i].replace('&', '@')
             elif words[i].lower() == "startHISsheet".lower() or words[i].lower() == "endHISsheet".lower() or words[
                 i].lower() == "endHISsheet.".lower():
                 return
