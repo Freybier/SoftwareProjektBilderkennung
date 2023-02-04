@@ -89,7 +89,7 @@
 #     for i, row in empdata.iterrows():
 #         sql = f"INSERT INTO Tabelle VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,'{fach}','{doz}')"
 #         my_cursor.execute(sql, tuple(row))
-#         print("Record inserted")
+#         #print("Record inserted")
 #         my_db.commit()
 #
 #     # my_cursor.execute(sql)

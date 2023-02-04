@@ -14,18 +14,36 @@ dozent_eingabe = gui1.get_dozent()
 
 csv1 = CSVObject()
 
+
+
 for x in files:
     text = auslese(x)
     csv1.convert(text, gui1)
+    #csv1.converter_neu(text, gui1)
+    #compare_files("Texts/tabelle8.txt", "Texts/vergleich_test_tabelle8.txt")
+    fach = csv1.get_kurs()
+    doz = csv1.get_dozent()
 
-fach = csv1.get_kurs()
-doz = csv1.get_dozent()
+    print(fach, doz)
 
-print(fach, doz)
+    #einlesen(fach, doz)
 
-#einlesen(fach, doz)
-#text_vergleich("Texts/tabelle8_csv.txt", "Texts/csvText.txt")
-#test(csv1)
+
+
+with open("output.hocr", "r") as file:
+    lines = file.readlines()
+    for line in lines:
+        if "<span class='ocrx_word'" in line:
+            start_index = line.find("x_wconf") + 8
+            end_index = line.find("'", start_index)
+            x_wconf = int(line[start_index:end_index])
+            if x_wconf < 80:
+                word_start = line.find(">") + 1
+                word_end = line.find("<", word_start)
+                word = line[word_start:word_end]
+                print(f"x_wconf: {x_wconf}, Word: {word}")
+
+vergleich_csv_text()
 
 """
 bild = cv2.imread("Images/test_text.png")
