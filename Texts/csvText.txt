@@ -1,13 +1,20 @@
+
+
 mtknr sortname bewertung pstatus pversuch ktxt spversion semester pdatum pnr bonus labnr pordnr porgnr Mail
-1958575 Çakar, Emre 500" AN 3 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 emre.cakar@hs-hannover.de
-1566198 Fuge, Torben-Patrick 130 AN 2 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 torben fuge@stud.hs-hannover.de
-1780576 Möller, Andreas 500 AN 1 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 andreas.moeller@stud.hs-hannover.de
-1967487 Akbulut, Cem 200 AN 1 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 cem.akbulut@stud.hs-hannover.de
-1043563 von-Herrenhausen, Augustus 170 AN 1 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 Augustus.vonherrenhausen@®stud.hs-hannover.de
-2630483 Watanabe, Shinji 300 AN 2 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 shinji.Watanabe@stud.hs-hannover.de
-3926046 Glööckler, Hans-Peter 500 AN 2 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 hans-peter.Gloeoveckler@stud.hs-hannover.de
-2194018 Ülker, Göran 230 AN 3 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 goeran.uelker@stud.hs-hannover.de
-1826409 Lämmert, Friederike 370 AN 1 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 friederike.Laemmert@stud.hs-hannover.de
-2085683 Klimakova, Olga 400 AN 2 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 olga.klimakova®@stud.hs-hannover.de
-1234567 Mustermann, Max 100 AN 3 M-IIM 20192 20212 17.01.2022 649352 0) 2369510 53225 204220 mMax.mustermann@stud.hs-hannover.de
+
+1334815 Leymann, Yann 500 AN 3 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 yann.leymann@®stud.hs-hannver.de
+1432835 Malfoy, Tom 500 AN 2 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 tom.malfoy@stud.hs-hannover.de
+1835463 Smith, Hunter 130 AN 1 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 hunter.smith@stud.hs-hannover.de
+1025473 Plüböm, Sheraldo 400 AN 1 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 sheraldo.plueboem&stud.hs-hannover.de
+1934573 Âais, Sidan 370 AN 1 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 sidan.aeais@stud.hs-hannover.de
+1639465 Tri, Cera 370 AN 2 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 cera.tri@stud.hs-hannover.de
+
+1209645 Löffel, Frauke 230 AN 2 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 frauke.loeffel@stud.hs-hannover.de
+1649063 Silie, Peter 200 AN 3 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 beter.silie@stud.hs-hannover.de
+1529737 Müller, Anna 100 AN 1 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 anna.mueller@stud.hs-hannover.de
+1540758 Schmidt, Susanne 270 AN 2 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 susanne.schmidt@stud.hs-hannover.de
+1269046 Händler, Heribert 500 AN 3 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 heribert.haendler@stud.hs-hannover.de
+1367894 Potter, Hans 100 AN 1 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 hans.potter@stud.hs-hnover.de
+6455882 ‚Akkus, Taylan 370 AN 2 M-IIM 20192 20212 17.01.2023 649352 0 3369510 53225 204220 taylan.akkus@stud.hs-hannover.de
+3445876 de-Castellan, Joel 170 AN 3 M-IIM 20192 20212 17.01.2024 649352 0 3369510 53225 204220 joel.de-castellan@stud.hs-hannover.de
 
