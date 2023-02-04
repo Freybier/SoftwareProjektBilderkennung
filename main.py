@@ -3,8 +3,8 @@ from auslesen import *
 from database import *
 
 #initialize_database()
-#loesche_tabelle("Tabelle")
-#erstelle_tabelle("Tabelle")
+loesche_tabelle("Tabelle")
+erstelle_tabelle("Tabelle")
 
 gui1 = Gui()
 files = gui1.dateizug()
@@ -26,7 +26,7 @@ for x in files:
 
     print(fach, doz)
 
-    #einlesen(fach, doz)
+    einlesen(fach, doz)
 
 
 
