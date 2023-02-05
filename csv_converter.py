@@ -97,6 +97,8 @@ class CSVObject:
         first_line2 = True
 
         for line in lines:
+            if line == "\n" or line == "":
+                continue
             if first_line2 and lines[0] != "startHISsheet":
                 if gui.get_kurs() != "" and gui.get_dozent() != "":
                     first_line2 = False
@@ -108,19 +110,14 @@ class CSVObject:
                     self.fach_dozent(line)
                     continue
             bearbeitete_line = self.fehlerbereinigung(line)
-            if bearbeitete_line == None:
-                continue
-            else:
-                words = bearbeitete_line.split()
-                for x in range(len(words)):
-                    if words[x] == None or words[x] == "\n":
-                        continue
-                    if (x == len(words) - 1):
-                        csv_converted2.write(f"\"{words[x]}\"")
+            if bearbeitete_line != None:
+                for x in range(len(bearbeitete_line)):
+                    if x == len(bearbeitete_line) - 1:
+                        csv_converted2.write(f"\"{bearbeitete_line[x]}\"")
                     else:
-                        csv_converted2.write(f"\"{words[x]}\",")
+                        csv_converted2.write(f"\"{bearbeitete_line[x]}\",")
+                csv_converted2.write("\n")
 
-            csv_converted2.write("\n")
         csv_converted2.close()
         self.csv_to_txt()
 
@@ -133,25 +130,36 @@ class CSVObject:
                     print(f"Es sollen {self.counter_spalten} spalten sein")
             if words[i] == None:
                 continue
+            # sorgt dafür dass manche mails mit den Wörtern combiniert werden
             elif words[i].endswith(".de") and len(words) != self.counter_spalten + 1:
                 for char in words[i]:
                     if char == '&':
-                        print("ich hab n falsches @")
-                        char = '@'
-                words[i-1] = f"{words[i-1]}{words[i]}"
+                        words[i] = words[i].replace('&', '@')
+                words[i - 1] = f"{words[i - 1]}{words[i]}"
                 words[i] = None
-
-            elif words[i].lower() == "startHISsheet".lower() or words[i].lower() == "endHISsheet".lower() or words[i].lower() == "endHISsheet.".lower():
-                return None
-            elif words[i] == "_" or words[i] == "-" or words[i] == "—" or words[i] == "=":
+            elif words[i].endswith(".de"):
+                for char in words[i]:
+                    if char == '&':
+                        words[i] = words[i].replace('&', '@')
+            elif words[i].lower() == "startHISsheet".lower() or words[i].lower() == "endHISsheet".lower() or words[
+                i].lower() == "endHISsheet.".lower():
+                return
+            elif words[i] == "_" or words[i] == "-" or words[i] == "—" or words[i] == "=" or words[i] == " ":
                 words[i] = None
-            elif words[i] == 'o':
+            elif words[i] == "MM" or words[i] == 'MAM':
+                words[i] = "M-IIM"
+            elif words[i] == 'o' or words[i] == '°':
                 words[i] = "0"
             elif words[i].endswith(","):
                 words[i] = f"{words[i]} {words[i + 1]}"
                 words[i + 1] = None
+            elif words[i] == "kit" or words[i] == "kbrt":
+                words[i] = "ktxt"
+            elif words[i] == "par":
+                words[i] = "pnr"
+
         filtered_words = [word for word in words if word is not None]
-        return " ".join(filtered_words)
+        return filtered_words
 
     def fach_dozent(self, line):
         first, *middle, last = line.split()
