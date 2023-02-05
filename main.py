@@ -1,6 +1,6 @@
 from gui import *
 from auslesen import *
-from database import *
+#from database import *
 
 #initialize_database()
 #loesche_tabelle("Tabelle")
@@ -17,9 +17,10 @@ csv1 = CSVObject()
 
 
 for x in files:
-    #text = auslese(x)
+    text = auslese(x)
     #csv1.convert(text, gui1)
-    #csv1.converter_neu(text, gui1)
+    csv1.converter_neu(text, gui1)
+    csv1.csv_sorte()
     #compare_files("Texts/tabelle8.txt", "Texts/vergleich_test_tabelle8.txt")
     fach = csv1.get_kurs()
     doz = csv1.get_dozent()
