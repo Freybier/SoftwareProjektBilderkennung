@@ -1,6 +1,6 @@
 from gui import *
 from auslesen import *
-#from database import *
+from database import *
 from csv_sorte import *
 #initialize_database()
 #loesche_tabelle("Tabelle")
