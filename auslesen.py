@@ -6,7 +6,7 @@ import numpy as np
 from csv_converter import *
 
 myconfig = r"--psm 6 --oem 3 --user-words custom_words.txt"
-
+#myconfig = r"--psm 6 --oem 3"
 
 def auslese(file):
 

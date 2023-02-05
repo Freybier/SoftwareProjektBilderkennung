@@ -1,11 +1,12 @@
 from gui import *
 from auslesen import *
-from database import *
+#from database import *
 from csv_sorte import *
+from hocr_conf import *
 
-initialize_database()
-loesche_tabelle("Tabelle")
-erstelle_tabelle("Tabelle")
+#initialize_database()
+#loesche_tabelle("Tabelle")
+#erstelle_tabelle("Tabelle")
 
 gui1 = Gui()
 files = gui1.dateizug()
@@ -28,38 +29,12 @@ for x in files:
 
     print(fach, doz)
 
-    einlesen(fach, doz)
+    #einlesen(fach, doz)
 
+if gui1.filebrowser2() is not None:
+    vergleich_csv_text()
 
-
-with open("output.hocr", "r") as file:
-    lines = file.readlines()
-    for line in lines:
-        if "<span class='ocrx_word'" in line:
-            start_index = line.find("x_wconf") + 8
-            end_index = line.find("'", start_index)
-            x_wconf = int(line[start_index:end_index])
-            if x_wconf < 80:
-                word_start = line.find(">") + 1
-                word_end = line.find("<", word_start)
-                word = line[word_start:word_end]
-                print(f"x_wconf: {x_wconf}, Word: {word}")
-
-with open("output.hocr", "r") as file:
-    lines = file.readlines()
-    with open("hocr-confidence.txt", "w") as confidence_file:
-        for line in lines:
-            if "<span class='ocrx_word'" in line:
-                start_index = line.find("x_wconf") + 8
-                end_index = line.find("'", start_index)
-                x_wconf = int(line[start_index:end_index])
-                if x_wconf < 80:
-                    word_start = line.find(">") + 1
-                    word_end = line.find("<", word_start)
-                    word = line[word_start:word_end]
-                    confidence_file.write(f"x_wconf: {x_wconf}, Word: {word}\n")
-
-vergleich_csv_text()
+hocr_conf()
 
 # while(1):
 #     suchbegriff = input('Nach welchem Namen sollen sie Suchen ("0" eingeben zum abbrechen)? ')
