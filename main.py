@@ -2,7 +2,8 @@ from gui import *
 from auslesen import *
 from database import *
 from csv_sorte import *
-#initialize_database()
+
+initialize_database()
 loesche_tabelle("Tabelle")
 erstelle_tabelle("Tabelle")
 
@@ -58,7 +59,14 @@ with open("output.hocr", "r") as file:
                     word = line[word_start:word_end]
                     confidence_file.write(f"x_wconf: {x_wconf}, Word: {word}\n")
 
-#vergleich_csv_text()
+vergleich_csv_text()
+
+while(1):
+    suchbegriff = input('Nach welchem Namen sollen sie Suchen ("0" eingeben zum abbrechen)? ')
+    if (suchbegriff == '0'):
+        break
+    else:
+        suche(suchbegriff)
 
 """
 bild = cv2.imread("Images/test_text.png")

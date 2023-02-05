@@ -3,17 +3,18 @@ from mysql.connector import Error
 import pandas as pd
 
 def initialize_database():
+    # Verbindung mit Datenbank
     my_db = mysql.connector.connect(
         host="localhost",
         user="root",
         password="password"
     )
     my_cursor = my_db.cursor()
+
+    # Wenn es noch keine Datenbank mit dem Namen "notenuebersicht" gibt wird eine erstellt
     my_cursor.execute("SHOW DATABASES LIKE 'notenuebersicht'")
     result = my_cursor.fetchall()
-
     x = []
-
     if result == x:
         my_cursor.execute("CREATE DATABASE notenuebersicht")
 
@@ -99,4 +100,28 @@ def einlesen(fach, doz):
 
     # my_cursor.execute(sql)
     # my_db.commit()
+
+def suche(suchbegriff):
+    # Verbindung zur Datenbank herstellen
+    my_db = mysql.connector.connect(
+        host="localhost",
+        user="root",
+        database="notenuebersicht",
+        password="password"
+    )
+    my_cursor = my_db.cursor()
+
+    # Abfrage erstellen und ausführen
+    query = "SELECT * FROM Tabelle WHERE sortname LIKE '%{}%'".format(suchbegriff)
+    my_cursor.execute(query)
+
+    # Ergebnisse auslesen
+    result = my_cursor.fetchall()
+
+    # Verbindung zur Datenbank schließen
+    my_db.close()
+
+    # Ergebnisse ausgeben
+    for i in result:
+        print(i)
 
