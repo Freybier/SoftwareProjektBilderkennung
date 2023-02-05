@@ -86,15 +86,8 @@ def einlesen(fach, doz):
             break
         text += ', '
 
-    df = pd.read_csv("CSV/csvTest2.csv", index_col=False, delimiter=',')
-    # empdata.head()
+    df = pd.read_csv("CSV/csv_sorted.csv", index_col=False, delimiter=',')
 
-    # sql = """
-    #         INSERT INTO Tabelle (Fach, `Dozierende Person`) VALUES (
-    #         'Algorithmen',
-    #         'Cakar'
-    #         )%s,%s,
-    #         """
     for i, row in df.iterrows():
         # sql = f"INSERT INTO Tabelle VALUES ({spalten}) ({'%s,' * 15}%s,%s)"
         # my_cursor.execute(sql, tuple(row) + (fach, doz))
