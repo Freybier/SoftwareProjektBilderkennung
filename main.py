@@ -36,12 +36,12 @@ if gui1.filebrowser2() is not None:
 
 hocr_conf()
 
-while(1):
-    suchbegriff = input('Nach welchem Namen sollen sie Suchen ("0" eingeben zum abbrechen)? ')
-    if (suchbegriff == '0'):
-        break
-    else:
-        suche(suchbegriff)
+# while(1):
+#     suchbegriff = input('Nach welchem Namen sollen sie Suchen ("0" eingeben zum abbrechen)? ')
+#     if (suchbegriff == '0'):
+#         break
+#     else:
+#         suche(suchbegriff)
 
 """
 bild = cv2.imread("Images/test_text.png")
