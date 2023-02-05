@@ -44,7 +44,21 @@ with open("output.hocr", "r") as file:
                 word = line[word_start:word_end]
                 print(f"x_wconf: {x_wconf}, Word: {word}")
 
-vergleich_csv_text()
+with open("output.hocr", "r") as file:
+    lines = file.readlines()
+    with open("hocr-confidence.txt", "w") as confidence_file:
+        for line in lines:
+            if "<span class='ocrx_word'" in line:
+                start_index = line.find("x_wconf") + 8
+                end_index = line.find("'", start_index)
+                x_wconf = int(line[start_index:end_index])
+                if x_wconf < 80:
+                    word_start = line.find(">") + 1
+                    word_end = line.find("<", word_start)
+                    word = line[word_start:word_end]
+                    confidence_file.write(f"x_wconf: {x_wconf}, Word: {word}\n")
+
+#vergleich_csv_text()
 
 """
 bild = cv2.imread("Images/test_text.png")
