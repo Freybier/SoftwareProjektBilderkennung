@@ -1,13 +1,13 @@
-Mail sortname bonus mtknr pversuch bewertung spversion semester pstatus pnr pordnr labnr porgnr pdatum ktxt
-yann.leymann@stud.hs-hannver.de Leymann, Yann 0 1334815 3 500 20192 20212 AN 649352 53225 3369510 204220 17.01.2022 M-IIM
-klaus.davor@stud.hs-hannover.de Davor, Klaus 0 1796521 2 500 20192 20212 AN 649352 53225 3369510 204220 17.01.2022 M-IIM
-petar.susac@stud.hs-hannover.de Susac, Petar 0 1917257 1 300 20192 20212 AN 649352 53225 3369510 204220 17.01.2022 M-IIM
-helene.lange@stud.hs-hannover.de Lange, Helene 0 1628037 1 500 20192 20212 AN 649352 53225 3369510 204220 17.01.2022 M-IIM
-gundula.gause@stud.hs-hannover.de Gause, Gundula 0 1702582 1 100 20192 20212 AN 649352 53225 3369510 204220 17.01.2022 M-IIM
-robaert.geiß@stud.hs-hannover.de Geiß, Robärt 0 1702571 2 100 20192 20212 AN 649352 53225 3369510 204220 17.01.2022 M-IIM
-hans.im-glueck@stud.hs-hannover.de im-Glück, Hans 0 1382627 2 100 20192 20212 AN 649352 53225 3369510 204220 17.01.2022 M-IIM
-mehmet.doener@stud.hs-hannover.de Döner, Mehmet 0 1250163 3 170 20192 20212 AN 649352 53225 3369510 204220 17.01.2022 M-IIM
-aeneas.roemer@stud.hs-hannover.de Römer, Aeneas 0 1693257 1 230 20192 20212 AN 649352 53225 3369510 204220 17.01.2022 M-IIM
-william.lonsdale@stud.hs-hannover.de Lonsdale, William 0 2457924 2 400 20192 20212 AN 649352 53225 3369510 204220 17.01.2022 M-IIM
-suffering.from-success@stud.hs-hannover.de from-Success, Suffering 0 1457893 3 300 20192 20212 AN 649352 53225 3369510 204220 17.01.2022 M-IIM
-keisuke.honda@stud.hs-hannover.de Honda, Keisuke 0 1938475 1 170 20192 20212 AN 649352 53225 3369510 204220 17.01.2022 M-IIM
+bonus pdatum Mail pordnr pversuch mtknr spversion semester pstatus pnr ktxt labnr porgnr sortname bewertung
+0 17.01.2022 yann.leymann@stud.hs-hannver.de 53225 3 1334815 20192 20212 AN 649352 M-IIM 3369510 204220 Leymann, Yann 500
+0 17.01.2022 klaus.davor@stud.hs-hannover.de 53225 2 1796521 20192 20212 AN 649352 M-IIM 3369510 204220 Davor, Klaus 500
+0 17.01.2022 petar.susac@stud.hs-hannover.de 53225 1 1917257 20192 20212 AN 649352 M-IIM 3369510 204220 Susac, Petar 300
+0 17.01.2022 helene.lange@stud.hs-hannover.de 53225 1 1628037 20192 20212 AN 649352 M-IIM 3369510 204220 Lange, Helene 500
+0 17.01.2022 gundula.gause@stud.hs-hannover.de 53225 1 1702582 20192 20212 AN 649352 M-IIM 3369510 204220 Gause, Gundula 100
+0 17.01.2022 robaert.geiß@stud.hs-hannover.de 53225 2 1702571 20192 20212 AN 649352 M-IIM 3369510 204220 Geiß, Robärt 100
+0 17.01.2022 hans.im-glueck@stud.hs-hannover.de 53225 2 1382627 20192 20212 AN 649352 M-IIM 3369510 204220 im-Glück, Hans 100
+0 17.01.2022 mehmet.doener@stud.hs-hannover.de 53225 3 1250163 20192 20212 AN 649352 M-IIM 3369510 204220 Döner, Mehmet 170
+0 17.01.2022 aeneas.roemer(Dstud.hs-hannover.de 53225 1 1693257 20192 20212 AN 649352 M-IIM 3369510 204220 Römer, Aeneas 230
+0 17.01.2022 william.lonsdale@stud.hs-hannover.de 53225 2 2457924 20192 20212 AN 649352 M-IIM 3369510 204220 Lonsdale, William 400
+0 17.01.2022 suffering.from-success@stud.hs-hannover.de 53225 3 1457893 20192 20212 AN 649352 M-IIM 3369510 204220 from-Success, Suffering 300
+0 17.01.2022 keisuke.honda@stud.hs-hannover.de 53225 1 1938475 20192 20212 AN 649352 M-IIM 3369510 204220 Honda, Keisuke 170
