@@ -146,14 +146,14 @@ class CSVObject:
                 return
             elif words[i] == "_" or words[i] == "-" or words[i] == "—" or words[i] == "=" or words[i] == " ":
                 words[i] = None
-            elif words[i] == "MM":
+            elif words[i] == "MM" or words[i] == 'MAM':
                 words[i] = "M-IIM"
             elif words[i] == 'o' or words[i] == '°':
                 words[i] = "0"
             elif words[i].endswith(","):
                 words[i] = f"{words[i]} {words[i + 1]}"
                 words[i + 1] = None
-            elif words[i] == "kit" or words[i] == "kbxt":
+            elif words[i] == "kit" or words[i] == "kbrt":
                 words[i] = "ktxt"
             elif words[i] == "par":
                 words[i] = "pnr"
