@@ -1,10 +1,11 @@
 from gui import *
 from auslesen import *
 from database import *
+from csv_sorte import *
 
-#initialize_database()
-#loesche_tabelle("Tabelle")
-#erstelle_tabelle("Tabelle")
+initialize_database()
+loesche_tabelle("Tabelle")
+erstelle_tabelle("Tabelle")
 
 gui1 = Gui()
 files = gui1.dateizug()
@@ -20,13 +21,14 @@ for x in files:
     text = auslese(x)
     #csv1.convert(text, gui1)
     csv1.converter_neu(text, gui1)
+    csv_sorte()
     #compare_files("Texts/tabelle8.txt", "Texts/vergleich_test_tabelle8.txt")
     fach = csv1.get_kurs()
     doz = csv1.get_dozent()
 
     print(fach, doz)
 
-    #einlesen(fach, doz)
+    einlesen(fach, doz)
 
 
 
@@ -43,7 +45,28 @@ with open("output.hocr", "r") as file:
                 word = line[word_start:word_end]
                 print(f"x_wconf: {x_wconf}, Word: {word}")
 
+with open("output.hocr", "r") as file:
+    lines = file.readlines()
+    with open("hocr-confidence.txt", "w") as confidence_file:
+        for line in lines:
+            if "<span class='ocrx_word'" in line:
+                start_index = line.find("x_wconf") + 8
+                end_index = line.find("'", start_index)
+                x_wconf = int(line[start_index:end_index])
+                if x_wconf < 80:
+                    word_start = line.find(">") + 1
+                    word_end = line.find("<", word_start)
+                    word = line[word_start:word_end]
+                    confidence_file.write(f"x_wconf: {x_wconf}, Word: {word}\n")
+
 vergleich_csv_text()
+
+while(1):
+    suchbegriff = input('Nach welchem Namen sollen sie Suchen ("0" eingeben zum abbrechen)? ')
+    if (suchbegriff == '0'):
+        break
+    else:
+        suche(suchbegriff)
 
 """
 bild = cv2.imread("Images/test_text.png")

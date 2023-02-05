@@ -153,16 +153,14 @@ class CSVObject:
                 return
             elif words[i] == "_" or words[i] == "-" or words[i] == "—" or words[i] == "=" or words[i] == " ":
                 words[i] = None
-                # words = self.entferne_element(words, words[i])
-            elif words[i] == "MM":
+            elif words[i] == "MM" or words[i] == 'MAM':
                 words[i] = "M-IIM"
             elif words[i] == 'o' or words[i] == '°':
                 words[i] = "0"
             elif words[i].endswith(","):
                 words[i] = f"{words[i]} {words[i + 1]}"
                 words[i + 1] = None
-                #words = self.entferne_element(words, words[i+1])
-            elif words[i] == "kit" or words[i] == "kbxt":
+            elif words[i] == "kit" or words[i] == "kbrt" or words[i] == "kbxt":
                 words[i] = "ktxt"
             elif words[i] == "par":
                 words[i] = "pnr"
