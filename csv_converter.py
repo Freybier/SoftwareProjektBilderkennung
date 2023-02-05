@@ -128,15 +128,22 @@ class CSVObject:
                 if words[i] == "mtknr":
                     self.counter_spalten = len(words)
                     print(f"Es sollen {self.counter_spalten} spalten sein")
-            if words[i] == None:
+            if words[i] == "" or words[i] is None:
+                print("Hab ein None gefunden")
                 continue
-            # sorgt dafür dass manche mails mit den Wörtern combiniert werden
-            elif words[i].endswith(".de") and len(words) != self.counter_spalten + 1:
+            # sorgt dafür, dass manche mails mit den Wörtern combiniert werden
+            #nutz eine While schleife die bis die richtige anzahl an wörtern in der Zeile ist alle hinteren miteinander verbindet, damit kannst du dir auch den di+oppelten code sparen
+            elif words[i].endswith(".de") and len(words) >= self.counter_spalten + 1:
                 for char in words[i]:
                     if char == '&':
                         words[i] = words[i].replace('&', '@')
-                words[i - 1] = f"{words[i - 1]}{words[i]}"
-                words[i] = None
+                ruckschritt = 1
+                #möglichkeit zum fixen des None-Errors: einen words per line counter machen, davon die erste Schleife abhängig machen und alle werte die zu viel sind komplett poppen(ähnlich wie im ersten Versuch)
+                while words[i-ruckschritt] is not None and words[i-ruckschritt].isdigit() is False:
+                    words[i - ruckschritt] = f"{words[i - ruckschritt]}{words[i-(ruckschritt-1)]}"
+                    words[i-(ruckschritt-1)] = None
+                    ruckschritt = ruckschritt+1
+                    #words = self.entferne_element(words, words[i])
             elif words[i].endswith(".de"):
                 for char in words[i]:
                     if char == '&':
@@ -146,6 +153,7 @@ class CSVObject:
                 return
             elif words[i] == "_" or words[i] == "-" or words[i] == "—" or words[i] == "=" or words[i] == " ":
                 words[i] = None
+                # words = self.entferne_element(words, words[i])
             elif words[i] == "MM":
                 words[i] = "M-IIM"
             elif words[i] == 'o' or words[i] == '°':
@@ -153,13 +161,27 @@ class CSVObject:
             elif words[i].endswith(","):
                 words[i] = f"{words[i]} {words[i + 1]}"
                 words[i + 1] = None
+                #words = self.entferne_element(words, words[i+1])
             elif words[i] == "kit" or words[i] == "kbxt":
                 words[i] = "ktxt"
             elif words[i] == "par":
                 words[i] = "pnr"
+            if i == words[len(words)-1]:
+                print(f"Die Zeile ist so fertig {words}")
+                return words
 
         filtered_words = [word for word in words if word is not None]
+        print(f"Die Zeile ist perfekt {filtered_words}")
         return filtered_words
+
+    def entferne_element(self, words, element):
+        element_to_delete = element
+        words.remove(element_to_delete)
+        for i in range(words.index(element), len(words) - 2):
+            words[i] = words[i + 1]
+
+        words.pop()
+        return words
 
     def fach_dozent(self, line):
         first, *middle, last = line.split()
