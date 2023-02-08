@@ -48,10 +48,10 @@ class CSVObject:
             for word in words:
                 if word == "mtknr":
                     counter_spalten = len(words)
-                    print(f"Es sollen {counter_spalten} spalten sein")
+                    #print(f"Es sollen {counter_spalten} spalten sein")
 
                 if word.endswith(".de") and len(words) != counter_spalten + 1:
-                    print(f"{word} ist die e-mail addresse")
+                    #print(f"{word} ist die e-mail addresse")
                     csv_converted.write(f"\"{prev_word}" + f"{word}\",")
                     counter_words = counter_words + 1
                     break
@@ -127,9 +127,9 @@ class CSVObject:
             if self.counter_spalten == 0:
                 if words[i] == "mtknr":
                     self.counter_spalten = len(words)
-                    print(f"Es sollen {self.counter_spalten} spalten sein")
+                    #print(f"Es sollen {self.counter_spalten} spalten sein")
             if words[i] == "" or words[i] is None:
-                print("Hab ein None gefunden")
+                #print("Hab ein None gefunden")
                 continue
             # sorgt dafür, dass manche mails mit den Wörtern combiniert werden
             #nutz eine While schleife die bis die richtige anzahl an wörtern in der Zeile ist alle hinteren miteinander verbindet, damit kannst du dir auch den di+oppelten code sparen
@@ -165,11 +165,11 @@ class CSVObject:
             elif words[i] == "par":
                 words[i] = "pnr"
             if i == words[len(words)-1]:
-                print(f"Die Zeile ist so fertig {words}")
+                #print(f"Die Zeile ist so fertig {words}")
                 return words
 
         filtered_words = [word for word in words if word is not None]
-        print(f"Die Zeile ist perfekt {filtered_words}")
+        #print(f"Die Zeile ist perfekt {filtered_words}")
         return filtered_words
 
     def entferne_element(self, words, element):

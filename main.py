@@ -1,12 +1,12 @@
 from gui import *
 from auslesen import *
-#from database import *
+from database import *
 from csv_sorte import *
 from hocr_conf import *
 
-#initialize_database()
-#loesche_tabelle("Tabelle")
-#erstelle_tabelle("Tabelle")
+initialize_database()
+loesche_tabelle("Tabelle")
+erstelle_tabelle("Tabelle")
 
 gui1 = Gui()
 files = gui1.dateizug()
@@ -16,7 +16,7 @@ dozent_eingabe = gui1.get_dozent()
 
 csv1 = CSVObject()
 
-
+# Test
 
 for x in files:
     text = auslese(x)
@@ -28,10 +28,10 @@ for x in files:
 
     print(fach, doz)
 
-    #einlesen(fach, doz)
+    einlesen(fach, doz)
 
-if gui1.filebrowser2() is not None:
-    vergleich_csv_text()
+# if gui1.filebrowser2() is not None:
+#     vergleich_csv_text()
 
 hocr_conf()
 
