@@ -42,7 +42,7 @@ def auslese(file):
 
     #custom word list
     with open('custom_words.txt', 'w') as f:
-        f.write('mtknr\nsortname\nbewertung\npstatus\npversuch\nktxt\nspversion\nsemester\npdatum\npnr\nbonus\nlabnr\npordnr\nporgnr\nMail\nstartHISsheet\nendHISsheet\n0\n@stud.hs-hannover.de\nÇakar')
+        f.write('mtknr\nsortname\nbewertung\npstatus\npversuch\nktxt\nspversion\nsemester\npdatum\npnr\nbonus\nlabnr\npordnr\nporgnr\nMail\nstartHISsheet\nendHISsheet\nÇakar')
 
     # Perform text extraction
 
