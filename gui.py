@@ -16,7 +16,7 @@ class Gui:
 
         # layout = [[sg.Text('Name des Dozenten'), sg.InputText()],
         #           [sg.Text('Kurs'), sg.InputText()],
-        #           [sg.FileBrowse(button_text="Upload"), sg.InputText("", key="-OUTPUT1-")],
+        #           [sg.Button("Upload"), sg.InputText("", key="-OUTPUT1-")],
         #           [sg.FileBrowse(button_text="Vergleich"), sg.InputText("", key="-OUTPUT2-")],
         #           [sg.Button('Ok')]]
 
