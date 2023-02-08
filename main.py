@@ -16,7 +16,6 @@ dozent_eingabe = gui1.get_dozent()
 
 csv1 = CSVObject()
 
-# Test für neuen upstream
 
 for x in files:
     text = auslese(x)
