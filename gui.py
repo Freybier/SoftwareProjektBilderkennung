@@ -1,6 +1,7 @@
 import PySimpleGUI as sg
 import threading
 from auslesen import *
+from vergleich import *
 
 
 class Gui:
@@ -40,8 +41,10 @@ class Gui:
             if event in (sg.WIN_CLOSED, 'Ok'):
                 self.dozent = values[0]
                 self.kurs = values[1]
-                thread = threading.Thread(target=vorbereitung(self.files, csv1, self))
-                thread.start()
+                auslesen = threading.Thread(target=vorbereitung(self.files, csv1, self))
+                auslesen.start()
+                vergleichen = threading.Thread(target=hocr_vergleich())
+                vergleichen.start()
         # window.close()
 
     def filebrowser(self):
