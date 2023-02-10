@@ -2,30 +2,32 @@ from gui import *
 from auslesen import *
 from database import *
 from csv_sorte import *
+import threading
 
 #initialize_database()
 #loesche_tabelle("Tabelle")
 #erstelle_tabelle("Tabelle")
 
+csv1 = CSVObject()
 gui1 = Gui()
-files = gui1.dateizug()
+gui1.dateizug(csv1)
 
 kurs_eingabe = gui1.get_kurs()
 dozent_eingabe = gui1.get_dozent()
 
-csv1 = CSVObject()
 
 
 
-for x in files:
-    text = auslese(x)
-    #csv1.convert(text, gui1)
-    csv1.converter_neu(text, gui1)
-    #csv_sorte()
-    fach = csv1.get_kurs()
-    doz = csv1.get_dozent()
 
-    print(fach, doz)
+# for x in files:
+#     text = auslese(x)
+#     #csv1.convert(text, gui1)
+#     csv1.converter_neu(text, gui1)
+#     #csv_sorte()
+#     fach = csv1.get_kurs()
+#     doz = csv1.get_dozent()
+#
+#     print(fach, doz)
 
     #einlesen(fach, doz)
 
