@@ -10,9 +10,9 @@ class Gui:
     def __init__(self):
         sg.theme('Dark')
         layout = [[sg.Text('Name des Dozenten'), sg.InputText()],
-                  [sg.Text('Kurs', pad=((5, 98), (0, 0))), sg.InputText(), sg.Button('Aktualisieren')],
-                  [sg.Text('Bilddateien', pad=((5, 62), (0, 0))), sg.InputText('', key='-FILES-'), sg.Button('Upload')],
-                  [sg.Button('Vergleich'), sg.InputText('', key='-TEXT-')],
+                  [sg.Text('Kurs', pad=((5, 98), (0, 0))), sg.InputText(), sg.Button('Aktualisieren', size=(15, 0))],
+                  [sg.Text('Bilddateien', pad=((5, 61), (0, 0))), sg.InputText('', key='-FILES-'), sg.Button('Upload', size=(15, 0))],
+                  [sg.Text('Vergleichsdaten', pad=((5, 32), (0, 0))), sg.InputText('', key='-TEXT-'), sg.Button('Vergleich', size=(15, 0))],
                   [sg.Column(layout=[[sg.Button('Datenbank', pad=((5, 345), (0, 0))), sg.Button('Ok'), sg.Button('Cancel')]],
                              pad=((0, 0), (70, 0)))]]
 
