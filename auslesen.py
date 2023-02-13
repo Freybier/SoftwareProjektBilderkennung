@@ -7,7 +7,7 @@ from csv_converter import *
 from csv_sorte import *
 
 myconfig = r"--psm 6 --oem 3 --user-words custom_words.txt"
-
+#myconfig = r"--psm 6 --oem 3"
 
 def vorbereitung(files, csv1, gui1):
     for x in files:

@@ -50,7 +50,8 @@
 #                         porgnr VARCHAR(255) NULL,
 #                         mail VARCHAR(255) NULL,
 #                         fach VARCHAR(255) NULL,
-#                         `Dozierende Person` VARCHAR(255) NULL
+#                         `Dozierende Person` VARCHAR(255) NULL,
+#                         PRIMARY KEY (mtknr, pdatum)
 #                         )
 #                 """
 #         my_cursor.execute(sql)
@@ -94,7 +95,7 @@
 #         # my_cursor.execute(sql, tuple(row) + (fach, doz))
 #         # sql = f"INSERT INTO Tabelle ({text}) VALUES ({spalten}) (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"#,'{fach}','{doz}')"
 #         # my_cursor.execute(sql, tuple(row))
-#         sql = f"INSERT INTO Tabelle ({text}) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+#         sql = f"INSERT IGNORE INTO Tabelle ({text}) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
 #         my_cursor.execute(sql, tuple(row) + (fach, doz))
 #         my_db.commit()
 #
