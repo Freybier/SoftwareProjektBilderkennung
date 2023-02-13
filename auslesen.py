@@ -4,12 +4,24 @@ import cv2
 from vergleich import *
 import numpy as np
 from csv_converter import *
+from csv_sorte import *
 
 myconfig = r"--psm 6 --oem 3 --user-words custom_words.txt"
 #myconfig = r"--psm 6 --oem 3"
 
-def auslese(file):
+def vorbereitung(files, csv1, gui1):
+    for x in files:
+        text = auslese(x)
+        # csv1.convert(text, gui1)
+        csv1.converter_neu(text, gui1)
+        csv_sorte()
+        fach = csv1.get_kurs()
+        doz = csv1.get_dozent()
 
+        print(fach, doz)
+
+
+def auslese(file):
     # Grayscale, Otsu's threshold
     image = cv2.imread(file)
 
@@ -40,9 +52,10 @@ def auslese(file):
     # kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
     invert = 255 - thresh
 
-    #custom word list
+    # custom word list
     with open('custom_words.txt', 'w') as f:
-        f.write('mtknr\nsortname\nbewertung\npstatus\npversuch\nktxt\nspversion\nsemester\npdatum\npnr\nbonus\nlabnr\npordnr\nporgnr\nMail\nstartHISsheet\nendHISsheet\nÇakar')
+        f.write(
+            'mtknr\nsortname\nbewertung\npstatus\npversuch\nktxt\nspversion\nsemester\npdatum\npnr\nbonus\nlabnr\npordnr\nporgnr\nMail\nstartHISsheet\nendHISsheet\nÇakar\nM-IIM')
 
     # Perform text extraction
 
@@ -57,18 +70,14 @@ def auslese(file):
     vergl = open("Texts/demo.txt", "w")
     vergl.write(text)
     vergl.close()
-    #vergleich(vergl)
+    # vergleich(vergl)
 
-    #cv2.imshow('image', image)
-    #cv2.imshow('gray', gray)
-    #cv2.imshow('binary', thresh)
-    #cv2.imshow('cropped', cropped_image)
-    #cv2.imwrite("Images/binary_spalten.png", cropped_image)
+    # cv2.imshow('image', image)
+    # cv2.imshow('gray', gray)
+    # cv2.imshow('binary', thresh)
+    # cv2.imshow('cropped', cropped_image)
+    # cv2.imwrite("Images/binary_spalten.png", cropped_image)
 
-    cv2.imshow('invert', invert)
-
-    #cv2.waitKey()
+    # cv2.waitKey()
 
     return text
-
-
