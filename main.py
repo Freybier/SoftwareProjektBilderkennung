@@ -11,9 +11,6 @@ csv1 = CSVObject()
 gui1 = Gui()
 gui1.dateizug(csv1)
 
-kurs_eingabe = gui1.get_kurs()
-dozent_eingabe = gui1.get_dozent()
-
 
 # while(1):
 #     suchbegriff = input('Nach welchem Namen sollen sie Suchen ("0" eingeben zum abbrechen)? ')
