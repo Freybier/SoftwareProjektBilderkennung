@@ -1,41 +1,51 @@
 import PySimpleGUI as sg
+import threading
+from auslesen import *
+from vergleich import *
 
 
 class Gui:
     dozent = ""
     kurs = ""
 
-    def dateizug(self):
+    def __init__(self):
+        sg.theme('Dark')
+        layout = [[sg.Text('Name des Dozenten'), sg.InputText()],
+                  [sg.Text('Kurs', pad=((5, 98), (0, 0))), sg.InputText(), sg.Button('Aktualisieren', size=(15, 0))],
+                  [sg.Text('Bilddateien', pad=((5, 61), (0, 0))), sg.InputText('', key='-FILES-'), sg.Button('Upload', size=(15, 0))],
+                  [sg.Text('Vergleichsdaten', pad=((5, 32), (0, 0))), sg.InputText('', key='-TEXT-'), sg.Button('Vergleich', size=(15, 0))],
+                  [sg.Column(layout=[[sg.Button('Datenbank', pad=((5, 345), (0, 0))), sg.Button('Ok'), sg.Button('Cancel')]],
+                             pad=((0, 0), (70, 0)))]]
+
+        self.window = sg.Window('Bilderkennung', layout, size=(600, 250))
+
+    def dateizug(self, csv1):
+
         sg.theme('Dark')
 
-        layout = [[sg.Text('Name des Dozenten'), sg.InputText()],
-                  [sg.Text('Kurs'), sg.InputText()],
-                  [sg.Button('Upload')],
-                  [sg.Button('Vergleich')],
-                  [sg.Button('Ok')]]
-
-        # layout = [[sg.Text('Name des Dozenten'), sg.InputText()],
-        #           [sg.Text('Kurs'), sg.InputText()],
-        #           [sg.Button("Upload"), sg.InputText("", key="-OUTPUT1-")],
-        #           [sg.FileBrowse(button_text="Vergleich"), sg.InputText("", key="-OUTPUT2-")],
-        #           [sg.Button('Ok')]]
-
-        window = sg.Window('Bilderkennung', layout)
-
         while True:
-            event, values = window.read()
+            event, values = self.window.read()
 
             if event == 'Upload':
                 self.files = self.filebrowser()
+                self.window['-FILES-'].update("{}".format(self.files))
             if event == 'Vergleich':
                 self.filebrowser2()
-            if event in (sg.WIN_CLOSED, 'Ok'):
+                self.window['-TEXT-'].update("{}".format("Texts/vergleich_text.txt"))
+            if event in (sg.WIN_CLOSED, 'Cancel'):
                 break
-        self.dozent = values[0]
-        self.kurs = values[1]
-        window.close()
-
-        return self.files
+            if event == 'Aktualisieren':
+                self.dozent = values[0]
+                self.kurs = values[1]
+                sg.popup_ok("Kurs und Dozent wurden aktualisiert")
+            if event == 'Ok':
+                self.dozent = values[0]
+                self.kurs = values[1]
+                auslesen = threading.Thread(target=vorbereitung(self.files, csv1, self))
+                auslesen.start()
+                vergleichen = threading.Thread(target=hocr_vergleich())
+                vergleichen.start()
+        self.window.close()
 
     def filebrowser(self):
         filename = sg.popup_get_file('Geben Sie eine Bilddatei an', multiple_files=True)
