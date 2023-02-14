@@ -1,0 +1,27 @@
+660044  IIM-119-01  Labor Algorithmen und Datenstrukturen  Çakar														
+														
+startHISsheet														endHISsheet
+bonus	pordnr	mtknr		pstatus	pversuch	semester	spversion	pnr		labnr		bewertung	ktxt		sortname				porgnr	Mail								pdatum
+0	53225		1334815	AN		3		20212		20192		649352	3369510	500		M-IIM		Leymann, Yann			204220	yann.leymann@stud.hs-hannver.de			17.01.2022
+0	53225		1796521	AN		2		20212		20192		649352	3369510	500		M-IIM		Davor, Klaus			204220	klaus.davor@stud.hs-hannover.de			17.01.2022
+0	53225		1917257	AN		1		20212		20192		649352	3369510	300		M-IIM		Susac, Petar			204220	petar.susac@stud.hs-hannover.de			17.01.2022
+0	53225		1628037	AN		1		20212		20192		649352	3369510	500		M-IIM		Lange, Helene			204220	helene.lange@stud.hs-hannover.de			17.01.2022
+0	53225		1702582	AN		1		20212		20192		649352	3369510	100		M-IIM		Gause, Gundula			204220	gundula.gause@stud.hs-hannover.de			17.01.2022
+0	53225		1702571	AN		2		20212		20192		649352	3369510	100		M-IIM		Geiß, Robärt			204220	robaert.geiß@stud.hs-hannover.de			17.01.2022
+0	53225		1382627	AN		2		20212		20192		649352	3369510	100		M-IIM		im-Glück, Hans			204220	hans.im-glueck@stud.hs-hannover.de			17.01.2022
+0	53225		1250163	AN		3		20212		20192		649352	3369510	170		M-IIM		Ülkay, Mehmet			204220	mehmet.ülkay@stud.hs-hannover.de			17.01.2022
+0	53225		1693257	AN		1		20212		20192		649352	3369510	230		M-IIM		Römer, Aeneas			204220	aeneas.roemer@stud.hs-hannover.de			17.01.2022
+0	53225		2457924	AN		2		20212		20192		649352	3369510	400		M-IIM		Lonsdale, William			204220	william.lonsdale@stud.hs-hannover.de		17.01.2022
+0	53225		1457893	AN		3		20212		20192		649352	3369510	300		M-IIM		from-Success, Suffering		204220	suffering.from-success@stud.hs-hannover.de	17.01.2022
+0	53225		1938475	AN		3		20212		20192		649352	3369510	500		M-IIM		Çakar, Emre				204220	emre.cakar@hs-hannover.de				17.01.2022
+0	53225		1566198	AN		2		20212		20192		649352	3369510	130		M-IIM		Fuge, Torben-Patrick		204220	torben.fuge@stud.hs-hannover.de			17.01.2022
+0	53225		1780576	AN		1		20212		20192		649352	3369510	500		M-IIM		Möller, Andreas			204220	andreas.moeller@stud.hs-hannover.de			17.01.2022
+0	53225		1967487	AN		1		20212		20192		649352	3369510	200		M-IIM		Akbulut, Cem			204220	cem.akbulut@stud.hs-hannover.de			17.01.2022
+0	53225		1043563	AN		1		20212		20192		649352	3369510	170		M-IIM		von-Herrenhausen, Augustus	204220	Augustus.vonherrenhausen@stud.hs-hannover.de	17.01.2022
+0	53225		2630483	AN		2		20212		20192		649352	3369510	300		M-IIM		Watanabe, Shinji			204220	shinji.Watanabe@stud.hs-hannover.de			17.01.2022
+0	53225		3926046	AN		2		20212		20192		649352	3369510	500		M-IIM		Glööckler, Hans-Peter		204220	hans-peter.Gloeoeckler@stud.hs-hannover.de	17.01.2022
+0	53225		2194018	AN		3		20212		20192		649352	3369510	230		M-IIM		Ülker, Göran			204220	goeran.uelker@stud.hs-hannover.de			17.01.2022
+0	53225		1826409	AN		1		20212		20192		649352	3369510	370		M-IIM		Lämmert, Friederike		204220	friederike.Laemmert@stud.hs-hannover.de		17.01.2022
+0	53225		2085683	AN		2		20212		20192		649352	3369510	400		M-IIM		Klimakova, Olga			204220	olga.klimakova@stud.hs-hannover.de			17.01.2022
+0	53225		1234567	AN		3		20212		20192		649352	3369510	100		M-IIM		Mustermann, Max			204220	max.mustermann@stud.hs-hannover.de			17.01.2022
+endHISsheet														
