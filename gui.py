@@ -38,14 +38,14 @@ class Gui:
                 self.dozent = values[0]
                 self.kurs = values[1]
                 sg.popup_ok("Kurs und Dozent wurden aktualisiert")
-            if event in (sg.WIN_CLOSED, 'Ok'):
+            if event == 'Ok':
                 self.dozent = values[0]
                 self.kurs = values[1]
                 auslesen = threading.Thread(target=vorbereitung(self.files, csv1, self))
                 auslesen.start()
                 vergleichen = threading.Thread(target=hocr_vergleich())
                 vergleichen.start()
-        # window.close()
+        self.window.close()
 
     def filebrowser(self):
         filename = sg.popup_get_file('Geben Sie eine Bilddatei an', multiple_files=True)
