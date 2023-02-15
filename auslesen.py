@@ -7,13 +7,11 @@ from csv_converter import *
 from csv_sorte import *
 
 myconfig = r"--psm 6 --oem 3 --user-words custom_words.txt"
-#myconfig = r"--psm 6 --oem 3"
 
 def vorbereitung(files, csv1, gui1):
     for x in files:
         text = auslese(x)
-        # csv1.convert(text, gui1)
-        csv1.converter_neu(text, gui1)
+        csv1.converter(text, gui1)
         #csv_sorte()
         fach = csv1.get_kurs()
         doz = csv1.get_dozent()
@@ -24,26 +22,6 @@ def vorbereitung(files, csv1, gui1):
 def auslese(file):
     # Grayscale, Otsu's threshold
     image = cv2.imread(file)
-
-    """
-    hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
-
-    # upper and lower limits
-    white_lo = np.array([50, 50, 50])
-    white_hi = np.array([120, 200, 200])
-    
-    #man könnte die mail adresse zuerst als schwarz masken, und dann alle anderen zwischenfarbtöne auf weiß
-    mail_lo = np.array([5, 5, 5])
-    mail_hi = np.array([200, 200, 255])
-
-    # mask
-    mail_mask = cv2.inRange(hsv, mail_lo, mail_hi)
-    mask = cv2.inRange(hsv, white_lo, white_hi)
-
-    # change image to white where not fully black
-    image[mail_mask > 0] = (0, 0, 0)
-    #image[mask > 0] = (255, 255, 255)
-    """
 
     gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
     thresh = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)[1]
@@ -70,14 +48,5 @@ def auslese(file):
     vergl = open("Texts/demo.txt", "w")
     vergl.write(text)
     vergl.close()
-    # vergleich(vergl)
-
-    # cv2.imshow('image', image)
-    # cv2.imshow('gray', gray)
-    # cv2.imshow('binary', thresh)
-    # cv2.imshow('cropped', cropped_image)
-    # cv2.imwrite("Images/binary_spalten.png", cropped_image)
-
-    # cv2.waitKey()
 
     return text

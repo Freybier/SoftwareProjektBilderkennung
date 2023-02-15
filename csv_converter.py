@@ -12,86 +12,7 @@ class CSVObject:
         self.dozent = ""
         self.kurs = ""
 
-    def convert(self, text, gui):
-        csv_converted = open("CSV/csvTest.csv", "w")
-        lines = text.split("\n")
-        counter_lines = 0
-
-        counter_spalten = 0
-
-        first_line = True
-
-        for line in lines:
-            if first_line:
-                if gui.get_kurs() != "" and gui.get_dozent() != "":
-                    first_line = False
-                    self.kurs = gui.get_kurs()
-                    self.dozent = gui.get_dozent()
-                    counter_lines = counter_lines + 1
-                    continue
-                else:
-                    first_line = False
-                    self.fach_dozent(line)
-                    counter_lines = counter_lines + 1
-                    continue
-            words = lines[counter_lines].split()
-            counter_lines = counter_lines + 1
-            counter_words = 0
-
-            name_tag = False
-            name = ""
-            if line == "":
-                continue
-
-            prev_word = ""
-
-            for word in words:
-                if word == "mtknr":
-                    counter_spalten = len(words)
-                    #print(f"Es sollen {counter_spalten} spalten sein")
-
-                if word.endswith(".de") and len(words) != counter_spalten + 1:
-                    #print(f"{word} ist die e-mail addresse")
-                    csv_converted.write(f"\"{prev_word}" + f"{word}\",")
-                    counter_words = counter_words + 1
-                    break
-                if word == "startHISsheet" or word == "endHISsheet":
-                    break
-                if word == "_" or word == "-" or word == "—" or word == "=":
-                    counter_words = counter_words + 1
-                    continue
-                for char in word:
-                    name_tag = False
-                    if char == ",":
-                        name_tag = True
-                if name_tag:
-                    name_tag = False
-                    name = word
-                    continue
-                counter_words = counter_words + 1
-                if name != "":
-                    csv_converted.write(f"\"{name}" + " " + f"{word}\",")
-                    name = ""
-                    counter_words = counter_words + 1
-                    continue
-                if word == 'o':
-                    csv_converted.write('"0",')
-                    continue
-                if counter_words != len(words):
-                    csv_converted.write(f"\"{word}\",")
-                else:
-                    csv_converted.write(f"\"{word}\"")
-
-                prev_word = word
-            if len(lines) != counter_lines:
-                csv_converted.write("\n")
-                self.counter_input = self.counter_input + 1
-
-        csv_converted.close()
-        self.csv_to_txt()
-
-    # toDo change python-for-loops into array based for loop, iterate through all words and check for mistakes before printing into csv-format
-    def converter_neu(self, text, gui):
+    def converter(self, text, gui):
         csv_converted2 = open("CSV/csvTest2.csv", "w")
         lines = text.split("\n")
         first_line2 = True
@@ -125,20 +46,18 @@ class CSVObject:
         words = line.split()
         for i in range(len(words)):
             if self.counter_spalten == 0:
-                if words[i] == "mtknr":
+                if words[i] == "Mail":
                     self.counter_spalten = len(words)
             if words[i] == "" or words[i] is None:
                 continue
-            # sorgt dafür, dass manche mails mit den Wörtern combiniert werden
-            #nutz eine While schleife die bis die richtige anzahl an wörtern in der Zeile ist alle hinteren miteinander verbindet, damit kannst du dir auch den di+oppelten code sparen
             elif words[i].endswith(".de"):
                 for char in words[i]:
                     if char == '&':
                         words[i] = words[i].replace('&', '@')
-                    if char == '®':
+                    elif char == '®':
                         words[i] = words[i].replace('®', '@')
-            elif words[i].lower() == "startHISsheet".lower() or words[i].lower() == "endHISsheet".lower() or words[
-                i].lower() == "endHISsheet.".lower():
+            elif words[i].lower() == "startHISsheet".lower() or words[i].lower() == "endHISsheet".lower()\
+                    or words[i].lower() == "endHISsheet.".lower():
                 return
             elif words[i] == "_" or words[i] == "-" or words[i] == "—" or words[i] == "=" or words[i] == " ":
                 words[i] = None
