@@ -2,6 +2,7 @@ import PySimpleGUI as sg
 import threading
 from auslesen import *
 from vergleich import *
+# from database import *
 
 
 class Gui:
@@ -45,6 +46,10 @@ class Gui:
                 auslesen.start()
                 vergleichen = threading.Thread(target=hocr_vergleich())
                 vergleichen.start()
+            # if event == 'Datenbank':
+            #     # datenB = threading.Thread(target=data_window())
+            #     # datenB.start()
+            #     build_datenbank_gui()
         self.window.close()
 
     def filebrowser(self):
@@ -76,3 +81,6 @@ class Gui:
 
     def get_kurs(self):
         return self.kurs
+
+    def data_window(self):
+        build_datenbank_gui()
