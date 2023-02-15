@@ -5,6 +5,7 @@ from vergleich import *
 import numpy as np
 from csv_converter import *
 from csv_sorte import *
+# from database import *
 
 myconfig = r"--psm 6 --oem 3 --user-words custom_words.txt"
 
@@ -17,6 +18,8 @@ def vorbereitung(files, csv1, gui1):
         doz = csv1.get_dozent()
 
         print(fach, doz)
+        # einlesen(fach, doz)
+
 
 
 def auslese(file):
