@@ -1,20 +1,32 @@
-660044 IIM-119-01 Labor Algorithmen und Datenstrukturen Cakar
+660044 IIM-119-01 Labor Algorithmen und Datenstrukturen Çakar
 
-startHISsheet endHISsheet
-
-mtknr sortname bewertung pstatus pversuch kit spversion semester pdatum pnr bonus labnr pordnr porgnr Mail
-
-1334815 Leymann, Yann 500 AN 3 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 yann.leymann@stud.hs-hannver.de
-1796521 Davor, Klaus 500 AN 2 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 klaus.davor@stud.hs-hannover.de
-1917257 Susac, Petar 300 AN 1 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 petar.susac@stud.hs-hannover.de
-1628037 Lange, Helene 500 AN 1 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 helene.lange@stud.hs-hannover.de
-1702582 Gause, Gundula 100 AN 1 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 gundula.gause@stud.hs-hannover.de
-1702571 Geiß, Robärt 100 AN 2 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 robaert.geiß@stud.hs-hannover.de
-1382627 im-Glück, Hans 100 AN 2 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 hans.im-glueck@stud.hs-hannover.de
-1250163 Döner, Mehmet 170 AN 3 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 mehmet.doener@stud.hs-hannover.de
-1693257 Römer, Aeneas 230 AN 1 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 aeneas.roemer(Dstud.hs-hannover.de
-2457924 Lonsdale, William 400 AN 2 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 william.lonsdale@stud.hs-hannover.de
-1457893 from-Success, Suffering 300 AN 3 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 suffering.from-success@stud.hs-hannover.de
-1938475 Honda, Keisuke 170 AN 1 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 keisuke.honda@stud.hs-hannover.de
-endHISsheet
+startHissheet endHissheet
+bewertung sortname mtknr pstatus kbit par spversion Mail pdatum semester bonus labnr pordnr porgar pversuch
+500 Leymann, Yann 1334815 AN MM 649352. 20192 yann.leymann @stud.hs-hannver.de 17.01.2022 20212 ° 3369510 53225 24220 3
+500 Davor, Klaus 1796921 AN MM 649352. 20192 klaus.davor@stud.hs-hannover.de 17.01.2022 20212 ° 3369510 53225 2020 2
+300 Susac, Petar 191757 AN MM 649352. 20192 Betar.susac@stud.hs-hannover.de 17.01.2022 20212 ° 3369510 53225 220 1
+500 Lange, Helene 1628037. AN MM 649352. 20192 helene. lange ®stud.hs-hannover.de 17.01.2022 20212 ° 3369510 53225 220 1
+100 Gause, Gundula 1702582. AN MM 649352. 20192 gundula.gause@stud.hs-hannover.de 17.01.2022 20212 ° 3369510 53225 220 1
+100 Geiß, Robärt 1702571 AN MM 649352. 20192 robaert.geiß@stud.hs-hannover.de 17.01.2022 20212 ° 3369510 53225 2020 2
+100 im-Glück, Hans 1382627 AN MM 649352. 20192 hans. im-glueck ®stud.hs-hannover.de 17.01.2022 20212 ° 3369510 53225 2020 2
+170 Döner, Mehmet 1250163 AN MM 649352. 20192 mehmet.doener@stud.hs-hannover.de 17.01.2022 20212 ° 3369510 53225 24220 3
+230 Römer, Aeneas 169357 AN MM 649352. 20192 aeneas.roemer@stud.hs-hannover.de 17.01.2022 20212 ° 3369510 53225 220 1
+200 Lonscale, William 2457924 AN MM 649352. 20192 william.lonsdale@stud.hs-hannover.de 17.01.2022 20212 ° 3369510 53225 2020 2
+300 #rom-Success, Suffering 1457893 AN MM 649352. 20192 suffering.from-success@stud.hs-hannover.de 17.01.2022 20212 ° 3369510 53225 24220 3
+170 Honda, Keisuke 1938475 AN MM 649352. 20192 keisuke.honda@stud.hs-hannover.de 17.01.2022 20212 ° 3369510 53225 220 1
+500 Rünzel, Gobin 1334815 AN MM 649352. 20192 gobin.ruenzel@stud.hs-hannver.de 17.01.2022 20212 ° 3369510 53225 24220 3
+500 Malfoy, Tom 1432835 AN MM 649352. 20192 tom.malfoy @stud.hs-hannover.de 17.01.2022 20212 ° 3369510 53225 2020 2
+130 Smith, Hunter 1835463 AN MM 649352. 20192 hunter.smith@stud.hs-hannover.de 17.01.2022 20212 ° 3369510 53225 220 1
+200 Plüböm, Sheraldo 1025473 AN MM 649352. 20192 sheraldo.plueboem @stud.hs-hannover.de 17.01.2022 20212 ° 3369510 53225 220 1
+370 Asis, Sidan 1934573 AN MM 649352. 20192 sidan.aeais@stud.hs-hannover.de 17.01.2022 20212 ° 3369510 53225 220 1
+370 Tri, Cera 1639465 AN MM 649352. 20192 gera.tri@stud.hs-hannover.de 17.01.2022 20212 ° 3369510 53225 2020 2
+230 Löffel, Frauke 1209645 AN MM 649352. 20192 frauke. loeffel@stud.hs-hannover.de 17.01.2022 20212 ° 3369510 53225 2020 2
+200 Silie, Peter 1649063 AN MM 649352. 20192 Beter.silie @stud.hs-hannover.de 17.01.2022 20212 ° 3369510 53225 24220 3
+100 Müller, Anna 1529737 AN MM 649352. 20192 anna.mueller@stud.hs-hannover.de 17.01.2022 20212 ° 3369510 53225 220 1
+270 Schmidt, Susanne 1540758 AN MM 649352. 20192 susanne.sehmidlt stud.hs-hannaver.de 17.01.2022 20212 ° 3369510 53225 2020 2
+500 Händler, Heribert 12046 AN MM 649352. 20192 heribert.haendller@stud.hs-hannover.de 17.01.2022 20212 ° 3369510 53225 24220 3
+100 Potter, Hans 1367894 AN MM 649352. 20192 hans.potter@stud.hs-hnover.de 17.01.2022 20212 ° 3369510 53225 220 1
+370 Akkus, Taylan 6455882. AN MM 649352. 20192 taylan.akkus@stud.hs-hannover.de 17.01.2023 20212 ° 3369510 53225 2020 2
+170 de-Castellan, Joel 3445876 AN MM 649352. 20192 ioel.de-castellan@stud.hs-hannover.de 17.01.2024 20212 ° 3369510 53225 24220 3
+endHissheet
 
