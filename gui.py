@@ -141,8 +141,6 @@ class Gui:
                 db_window.close()
 
             if event == 'Spalte löschen':
-                # l_spalte = threading.Thread(target=lambda: self.db_loeschen(get_column_names(mydb)))
-                # l_spalte.start()
                 l_spalte = self.db_loeschen(get_column_names(mydb))
                 for i in l_spalte:
                     loesche_spalte(mydb, i)

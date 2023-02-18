@@ -1,16 +1,14 @@
 import mysql.connector
-from mysql.connector import Error
 import pandas as pd
-import PySimpleGUI as sg
 
 def initialize_database():
-    # Verbindung mit Datenbank
-    my_db = mysql.connector.connect(
+    # Verbindung zur Datenbank herstellen
+    mydb = mysql.connector.connect(
         host="localhost",
         user="root",
         password="password"
     )
-    my_cursor = my_db.cursor()
+    my_cursor = mydb.cursor()
 
     # Wenn es noch keine Datenbank mit dem Namen "notenuebersicht" gibt wird eine erstellt
     my_cursor.execute("SHOW DATABASES LIKE 'notenuebersicht'")
@@ -20,16 +18,19 @@ def initialize_database():
         my_cursor.execute("CREATE DATABASE notenuebersicht")
 
 def erstelle_tabelle(name):
-    my_db = mysql.connector.connect(
+    # Verbindung zur Datenbank herstellen
+    mydb = mysql.connector.connect(
         host="localhost",
         user="root",
         database="notenuebersicht",
         password="password"
     )
-    my_cursor = my_db.cursor()
+    my_cursor = mydb.cursor()
     test = f"SHOW TABLES LIKE '{name}'"
     my_cursor.execute(test)
     result = my_cursor.fetchone()
+
+    # Wenn es noch keine Tabelle mit dem eingegebenen Namen gibt wird eine erstellt
     if result:
         x = 0;
     else:
@@ -58,115 +59,67 @@ def erstelle_tabelle(name):
         my_cursor.execute(sql)
 
 def loesche_tabelle(name):
-    my_db = mysql.connector.connect(
+    # Verbindung zur Datenbank herstellen
+    mydb = mysql.connector.connect(
         host="localhost",
         user="root",
         database="notenuebersicht",
         password="password"
     )
-    my_cursor = my_db.cursor()
+    my_cursor = mydb.cursor()
     test = f"SHOW TABLES LIKE '{name}'"
     my_cursor.execute(test)
     result = my_cursor.fetchone()
+
+    # Spalte mit dem übergebenen Namen wird gelöscht
     if result:
         my_cursor.execute(f"DROP TABLE {name}")
 
 def einlesen(fach, doz):
-    my_db = mysql.connector.connect(
+    # Verbindung zur Datenbank herstellen
+    mydb = mysql.connector.connect(
         host="localhost",
         user="root",
         database="notenuebersicht",
         password="password"
     )
-    my_cursor = my_db.cursor()
+    my_cursor = mydb.cursor()
 
     spalten = ['mtknr','sortname','bewertung','pstatus','pversuch','ktxt','spversion','semester','pdatum','pnr','bonus','labnr','pordnr','porgnr','mail','fach','`Dozierende Person`']
     text = ''
 
+    # Ein String mit den Namen wird erzeugt
     for i in range(0, 17):
         text += spalten[i]
         if (i == 16):
             break
         text += ', '
 
+    # CSV wird geöffnet
     df = pd.read_csv("CSV/csv_sorted.csv", index_col=False, delimiter=',')
-    # df = pd.read_csv("CSV/csvTest2.csv", index_col=False, delimiter=',')
+    # df = pd.read_csv("CSV/csvTest2.csv", index_col=False, delimiter=',')      # Hier wird die unsortierte CSV geöffnet
 
+    # Die Werte werden in die Tabelle eingelesen
     for i, row in df.iterrows():
         sql = f"INSERT IGNORE INTO Tabelle ({text}) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
         my_cursor.execute(sql, tuple(row) + (fach, doz))
+    mydb.commit()
 
-    my_db.commit()
-
-def suche(suchbegriff):
-    # Verbindung zur Datenbank herstellen
-    my_db = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        database="notenuebersicht",
-        password="password"
-    )
-    my_cursor = my_db.cursor()
-
-    # Abfrage erstellen und ausführen
-    query = "SELECT * FROM Tabelle WHERE sortname LIKE '%{}%'".format(suchbegriff)
-    my_cursor.execute(query)
-
-    # Ergebnisse auslesen
-    result = my_cursor.fetchall()
-
-    # Verbindung zur Datenbank schließen
-    my_db.close()
-
-    # Ergebnisse ausgeben
-    for i in result:
-        print(i)
-
-def gethead():
-    # Verbindung zur Datenbank herstellen
-    my_db = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        database="notenuebersicht",
-        password="password"
-    )
-    my_cursor = my_db.cursor()
-
-    # df = pd.read_csv("CSV/csvTest2.csv", index_col=False, delimiter=',')
-
-    sql = """
-            SELECT `COLUMN_NAME`
-            FROM `INFORMATION_SCHEMA`.`COLUMNS`
-            WHERE `TABLE_SCHEMA`='notenuebersicht'
-            AND `TABLE_NAME`='Tabelle';
-            """
-    my_cursor.execute(sql)
-    df = my_cursor.fetchall()
-
-    spalten = []
-    # iterating the columns
-    for col in df:
-        print(col)
-        spalten.append(col)
-
-    # return spalten
-
-# Funktion zum Abrufen der Tabelle
 def get_table_data(mydb):
     mycursor = mydb.cursor()
     mycursor.execute("SELECT * FROM Tabelle")
     result = mycursor.fetchall()
+
     # Umwandlung von List[Tuple] in List[List]
     table_data = [list(row) for row in result]
     mycursor.close()
     return table_data
 
-# Funktion zum Abrufen der Spaltennamen
 def get_column_names(mydb):
     mycursor = mydb.cursor()
     mycursor.execute("SELECT * FROM Tabelle LIMIT 0")
     column_names = [i[0] for i in mycursor.description]
-    mycursor.fetchall()  # Abrufen aller Zeilen, bevor der Cursor geschlossen wird
+    mycursor.fetchall()
     mycursor.close()
     return column_names
 

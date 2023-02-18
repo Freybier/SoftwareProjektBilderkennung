@@ -1,0 +1,5 @@
+mysql-connector-python==8.0.31
+opencv-python==4.6.0.66
+pandas==1.5.1
+PySimpleGUI==4.60.4
+pytesseract==0.3.10
