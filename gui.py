@@ -15,8 +15,9 @@ class Gui:
                   [sg.Text('Kurs', pad=((5, 98), (0, 0))), sg.InputText(), sg.Button('Aktualisieren', size=(15, 0))],
                   [sg.Text('Bilddateien', pad=((5, 61), (0, 0))), sg.InputText('', key='-FILES-'), sg.Button('Upload', size=(15, 0))],
                   [sg.Text('Vergleichsdaten', pad=((5, 32), (0, 0))), sg.InputText('', key='-TEXT-'), sg.Button('Vergleich', size=(15, 0))],
+                  [sg.Text('Bei einer kleineren Schwriftgröße als "14" kann es zu Problemen bei der Auslese kommen.')],
                   [sg.Column(layout=[[sg.Button('Datenbank', pad=((5, 345), (0, 0))), sg.Button('Ok'), sg.Button('Cancel')]],
-                             pad=((0, 0), (70, 0)))]]
+                             pad=((0, 0), (50, 0)))]]
 
         self.window = sg.Window('Bilderkennung', layout, size=(600, 250))
 
@@ -96,14 +97,14 @@ class Gui:
         search_input = sg.InputText(key='search')
         search_button = sg.Button('Suchen')
 
-        # Schaltfläche zum Hinzufügen einer Spalte hinzufügen
+        # Spalte hinzufügen
         add_column_input = sg.InputText(key='column_name')
         add_column_button = sg.Button('Spalte hinzufügen')
 
-        # Button zum Löschen der Spalten
+        # Button zum Löschen der Spalten hinzufügen
         drop_column_button = sg.Button('Spalte löschen')
 
-        # Spaltenüberschriften und Tabelleninhalt hinzufügen
+        # Layout des Fensters hinzufügen
         columns = get_column_names(mydb)
         table_data = get_table_data(mydb)
         table_layout = [[search_input, search_button],
@@ -114,50 +115,54 @@ class Gui:
         # Fenster erstellen
         db_window = sg.Window('Datenbank', table_layout)
 
-        # Schleife zum Aktualisieren der Tabelle basierend auf der Suche
+        # Schleife für die Aktionen des Fensters
         while True:
             event, values = db_window.read()
             if event == sg.WIN_CLOSED:
                 break
 
-            # Suchen-Button auswerten
+            # Suchen Aktion
             if event == 'Suchen':
                 search_term = values['search']
                 filtered_data = [row for row in get_table_data(mydb) if search_term.lower() in str(row).lower()]
                 db_window['-TABLE-'].update(values=filtered_data)
 
-            # Schaltfläche zum Hinzufügen einer Spalte auswerten
+            # Spalte hinzufügen Aktion
             if event == 'Spalte hinzufügen':
                 column_name = values['column_name']
                 add_column(mydb, column_name)
 
-                # Spaltenüberschriften aktualisieren
                 columns = get_column_names(mydb)
 
-                # Tabellen-Element mit aktualisierten Daten und Spaltenüberschriften neu erstellen
+                # Tabellen mit aktualisierten Daten und Spaltenüberschriften neu erstellen
                 table_data = get_table_data(mydb)
                 table = db_window['-TABLE-']
                 table.update(values=table_data)
+                # Fenster schließen
                 db_window.close()
 
+            # Spalte Löschen Aktion
             if event == 'Spalte löschen':
                 l_spalte = self.db_loeschen(get_column_names(mydb))
                 for i in l_spalte:
                     loesche_spalte(mydb, i)
+                # Fenster schließen
                 db_window.close()
 
         db_window.close()
 
     def db_loeschen(self, spalten):
-
+        # Layout des Fensters hinzufügen
         layout = [
             [sg.Text('Löschbare Elemente der Tabelle')],
             [sg.Listbox(spalten, size=(20, 15), key='SELECTED', enable_events=True, select_mode='extended')],
             [sg.Button('Löschen')],
         ]
 
+        # Fenster erstellen
         window = sg.Window('Spalte löschen', layout)
 
+        # Schleife für die Aktionen des Fensters
         while True:
             event, values = window.read()
 
@@ -168,5 +173,6 @@ class Gui:
 
         window.close()
 
+        # Ausgewählte Spalten zurückgeben
         if values and values['SELECTED']:
             return values['SELECTED']
