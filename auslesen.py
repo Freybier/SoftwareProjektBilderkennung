@@ -1,9 +1,6 @@
 import pytesseract
-import PIL.Image
 import cv2
-from vergleich import *
-import numpy as np
-from csv_converter import *
+from hocr_conf import *
 from csv_sorte import *
 from database import *
 
@@ -47,6 +44,8 @@ def auslese(file):
 
     with open('output.hocr', 'w') as f:
         f.write(hocr)
+
+    hocr_conf()
 
     vergl = open("Texts/demo.txt", "w")
     vergl.write(text)
