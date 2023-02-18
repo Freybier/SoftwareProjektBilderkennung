@@ -47,6 +47,9 @@ def auslese(file):
 
     hocr_conf()
 
+    # cv2.imshow('invert', invert)
+    # cv2.waitKey()
+
     vergl = open("Texts/demo.txt", "w")
     vergl.write(text)
     vergl.close()

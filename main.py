@@ -1,3 +1,4 @@
+from csv_converter import CSVObject
 from gui import *
 from database import *
 
