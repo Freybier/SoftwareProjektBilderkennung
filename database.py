@@ -89,24 +89,14 @@ def einlesen(fach, doz):
             break
         text += ', '
 
-    # df = pd.read_csv("CSV/csv_sorted.csv", index_col=False, delimiter=',')
-    df = pd.read_csv("CSV/csvTest2.csv", index_col=False, delimiter=',')
+    df = pd.read_csv("CSV/csv_sorted.csv", index_col=False, delimiter=',')
+    # df = pd.read_csv("CSV/csvTest2.csv", index_col=False, delimiter=',')
 
-    try:
-        for i, row in df.iterrows():
-            sql = f"INSERT IGNORE INTO Tabelle ({text}) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
-            my_cursor.execute(sql, tuple(row) + (fach, doz))
+    for i, row in df.iterrows():
+        sql = f"INSERT IGNORE INTO Tabelle ({text}) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+        my_cursor.execute(sql, tuple(row) + (fach, doz))
 
-        my_db.commit()
-    except my_db.Error as e:
-        print(f"Error in row {i} adding entry to database: {e}")
-    # sql = """SELECT * FROM Tabelle;"""
-    # my_cursor.execute(sql)
-    #
-    # myresult = my_cursor.fetchall()
-    #
-    # for x in myresult:
-    #     print(x)
+    my_db.commit()
 
 def suche(suchbegriff):
     # Verbindung zur Datenbank herstellen

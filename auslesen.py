@@ -13,7 +13,7 @@ def vorbereitung(files, csv1, gui1):
     for x in files:
         text = auslese(x)
         csv1.converter(text, gui1)
-        # csv_sorte()
+        csv_sorte()
         fach = csv1.get_kurs()
         doz = csv1.get_dozent()
 

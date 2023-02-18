@@ -50,6 +50,8 @@ class CSVObject:
                     self.counter_spalten = len(words)
             if words[i] == "" or words[i] is None:
                 continue
+            elif words[i].endswith("."):
+                words[i] = words[i].replace('.','')
             elif words[i].endswith(".de"):
                 for char in words[i]:
                     if char == '&':
