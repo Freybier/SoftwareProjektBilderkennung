@@ -6,20 +6,21 @@ from database import *
 
 myconfig = r"--psm 6 --oem 3 --user-words custom_words.txt"
 
-def vorbereitung(files, csv1, gui1):
+
+def processing(files, csv1, gui1):
+    # starting the whole process
     for x in files:
-        text = auslese(x)
+        text = text_extraction(x)
         csv1.converter(text, gui1)
         csv_sorte()
+
         fach = csv1.get_kurs()
         doz = csv1.get_dozent()
 
-        print(fach, doz)
-        einlesen(fach, doz)
+        # einlesen(fach, doz)
 
 
-
-def auslese(file):
+def text_extraction(file):
     # Grayscale, Otsu's threshold
     image = cv2.imread(file)
 
@@ -27,22 +28,15 @@ def auslese(file):
     thresh = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)[1]
 
     # invert image
-    # kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
     invert = 255 - thresh
 
-    # custom word list
-    with open('custom_words.txt', 'w') as f:
-        f.write(
-            'mtknr\nsortname\nbewertung\npstatus\npversuch\nktxt\nspversion\nsemester\npdatum\npnr\nbonus\nlabnr\npordnr\nporgnr\nMail\nstartHISsheet\nendHISsheet\nÇakar\nM-IIM')
-
     # Perform text extraction
-
     text = pytesseract.image_to_string(invert, lang='deu+tur', config=myconfig)
-
+    # getting the hocr output for comparison
     hocr_output = pytesseract.image_to_pdf_or_hocr(invert, extension='hocr', lang='deu+tur', config=myconfig)
     hocr = hocr_output.decode('utf-8')
 
-    with open('output.hocr', 'w') as f:
+    with open('Texts/output.hocr', 'w') as f:
         f.write(hocr)
 
     hocr_conf()
@@ -50,8 +44,9 @@ def auslese(file):
     # cv2.imshow('invert', invert)
     # cv2.waitKey()
 
-    vergl = open("Texts/demo.txt", "w")
-    vergl.write(text)
-    vergl.close()
+    # printing the extracted text before processing
+    extracted_text = open("Texts/ausgabe.txt", "w")
+    extracted_text.write(text)
+    extracted_text.close()
 
     return text

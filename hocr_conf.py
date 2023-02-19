@@ -1,5 +1,6 @@
+# returns confidence values for each word, and prints it value below 80%
 def hocr_conf():
-    with open("output.hocr", "r") as file:
+    with open("Texts/output.hocr", "r") as file:
         lines = file.readlines()
         with open("Texts/hocr_confidence.txt", "w") as confidence_file:
             for line in lines:
