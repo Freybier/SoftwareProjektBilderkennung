@@ -1,2 +1,0 @@
-Line 6: expected 'michael.jackman@stud.hs-hannover.de', but got 'michaeljackman@stud.hs-hannover.de'
-Line 27: expected '20192', but got '20132'
