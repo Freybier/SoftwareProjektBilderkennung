@@ -32,6 +32,7 @@ def processing(files, csv1, gui1):
     load_screen.close()
 
 
+
 def text_extraction(file):
     # Grayscale, Otsu's threshold
     image = cv2.imread(file)
