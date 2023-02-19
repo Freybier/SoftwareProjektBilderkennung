@@ -1,6 +1,6 @@
 from csv_converter import CSVObject
 from gui import *
-#from database import *
+from database import *
 
 # initialize_database()
 # loesche_tabelle("Tabelle")

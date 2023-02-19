@@ -89,7 +89,7 @@ class Gui:
 
     def get_kurs(self):
         return self.kurs
-"""
+
     def build_datenbank_gui(self):
         # connecting to database
         mydb = mysql.connector.connect(
@@ -112,11 +112,14 @@ class Gui:
         # add column-deletion-button
         drop_column_button = sg.Button('Spalte löschen')
 
+        # add line-deletion-button
+        drop_line_button = sg.Button('Zeile löschen')
+
         # creating layout and window
         columns = get_column_names(mydb)
         table_data = get_table_data(mydb)
         table_layout = [[search_input, search_button],
-                        [add_column_input, add_column_button, drop_column_button],
+                        [add_column_input, add_column_button, drop_column_button, drop_line_button],
                         [sg.Table(values=table_data, headings=columns, num_rows=10,
                                   auto_size_columns=True, key='-TABLE-')]]
 
@@ -152,7 +155,21 @@ class Gui:
                 else:
                     for i in l_spalte:
                         loesche_spalte(mydb, i)
-                # Fenster schließen
+                #close window
+                db_window.close()
+
+            if event == 'Zeile löschen':
+                l_zeile = self.db_loeschen(get_table_data(mydb))
+                if l_zeile == 0:
+                    break
+                else:
+                    for i in l_zeile:
+                        loesche_zeile(mydb, i[0])
+                # create new table with new values
+                table_data = get_table_data(mydb)
+                table = db_window['-TABLE-']
+                table.update(values=table_data)
+                # close window
                 db_window.close()
 
         db_window.close()
@@ -183,4 +200,31 @@ class Gui:
             return values['SELECTED']
         else:
             return 0
-"""
+
+    def db_zeile_loeschen(self, zeil):
+        # creating layout and window
+        layout = [
+            [sg.Text('Löschbare Elemente der Tabelle')],
+            [sg.Listbox(zeil, size=(20, 15), key='SELECTED', enable_events=True, select_mode='extended')],
+            [sg.Button('Löschen')],
+        ]
+
+        window = sg.Window('Zeile löschen', layout)
+        window.set_size((1000, window.size[1]))
+
+        # waiting for events
+        while True:
+            event, values = window.read()
+
+            if event == sg.WINDOW_CLOSED:
+                break
+            elif event == 'Löschen':
+                break
+
+        window.close()
+
+        # return selected fields
+        if values and values['SELECTED']:
+            return values['SELECTED']
+        else:
+            return 0
