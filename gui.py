@@ -16,9 +16,9 @@ class Gui:
                   [sg.Text('Kurs', pad=((5, 98), (0, 0))), sg.InputText(), sg.Button('Aktualisieren', size=(15, 0))],
                   [sg.Text('Bilddateien', pad=((5, 61), (0, 0))), sg.InputText('', key='-FILES-'), sg.Button('Upload', size=(15, 0))],
                   [sg.Text('Vergleichsdaten', pad=((5, 32), (0, 0))), sg.InputText('', key='-TEXT-'), sg.Button('Vergleich', size=(15, 0))],
-                  [sg.Text('Bei einer kleineren Schwriftgröße als "14" kann es zu Problemen bei der Auslese kommen.')],
+                  [sg.Text('Bei Problemen kann eine Änderung der Schriftgröße helfen. "15" hat sich als stabilste \nSchriftgröße herausgestellt.')],
                   [sg.Column(layout=[[sg.Button('Datenbank', pad=((5, 345), (0, 0))), sg.Button('Ok'), sg.Button('Cancel')]],
-                             pad=((0, 0), (50, 0)))]]
+                             pad=((0, 0), (30, 0)))]]
 
         self.window = sg.Window('Bilderkennung', layout, size=(600, 250))
 
@@ -142,8 +142,12 @@ class Gui:
 
             if event == 'Spalte löschen':
                 l_spalte = self.db_loeschen(get_column_names(mydb))
-                for i in l_spalte:
-                    loesche_spalte(mydb, i)
+                if l_spalte == 0:
+                    break
+                else:
+                    for i in l_spalte:
+                        loesche_spalte(mydb, i)
+                # Fenster schließen
                 db_window.close()
 
         db_window.close()
@@ -172,3 +176,5 @@ class Gui:
         # return selected fields
         if values and values['SELECTED']:
             return values['SELECTED']
+        else:
+            return 0

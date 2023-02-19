@@ -97,6 +97,8 @@ def einlesen(fach, doz):
 
     # open CSV
     df = pd.read_csv("CSV/csv_sorted.csv", index_col=False, delimiter=',')
+
+    # df = pd.read_csv("CSV/csv_sorted.csv")#, index_col=False, delimiter=',')
     # df = pd.read_csv("CSV/csvTest2.csv", index_col=False, delimiter=',')      # Hier wird die unsortierte CSV geöffnet -> In manchen Fällen besseres Ergebnis
 
     # reading values into table
