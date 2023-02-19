@@ -1,6 +1,3 @@
-660044  IIM-119-01  Labor Algorithmen und Datenstrukturen  Çakar														
-														
-startHISsheet														endHISsheet
 mtknr	sortname	bewertung	pstatus	pversuch	ktxt	spversion	semester	pdatum	pnr	bonus	labnr	pordnr	porgnr	Mail
 1234567    	Seffer, Pierre	500	AN	3	M-IIM	20192	20212	17.01.2022	649352	0	3369510	53225	204220	pierre.seffer@stud.hs-hannover.de
 1234804    	Ussach, Alex	500	AN	2	M-IIM	20192	20212	17.01.2022	649352	0	3369510	53225	204220	alex.ussach@stud.hs-hannover.de
@@ -27,5 +24,4 @@ mtknr	sortname	bewertung	pstatus	pversuch	ktxt	spversion	semester	pdatum	pnr	bon
 1239781    	Koc, Okan	500	AN	3	M-IIM	20192	20212	17.01.2022	649352	0	3369510	53225	204220	okan.koc@stud.hs-hannover.de
 1240018    	Nguyen, My	100	AN	1	M-IIM	20192	20212	17.01.2022	649352	0	3369510	53225	204220	my.nguyen@stud.hs-hannover.de
 1240255    	Fortmann, Jannis	370	AN	2	M-IIM	20192	20212	17.01.2023	649352	0	3369510	53225	204220	jannis.fortmann@stud.hs-hannover.de
-1240492    	von-Franke, Nicolas	170	AN	3	M-IIM	20192	20212	17.01.2024	649352	0	3369510	53225	204220	nicolas.von-franke@stud.hs-hannover.de
-endHISsheet														
+1240492    	von-Franke, Nicolas	170	AN	3	M-IIM	20192	20212	17.01.2024	649352	0	3369510	53225	204220	nicolas.von-franke@stud.hs-hannover.de												
