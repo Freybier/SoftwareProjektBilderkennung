@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+mtknr sortname bewertung pstatus pversuch ktxt spversion semester pdatum pnr bonus labnr pordnr porgnr Mail
+3838383 Friase, Sina 400 AN 1 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 sinafriese@stud.hs-hannover.de
+1036272 Prinz, Birgit 200 AN 1 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 birgit.prinz@stud.hs-hannover.de
+1026374 Fray,Luki 300 AN 1 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 luki.fray@stud.hs-hannover.de
+1926437 Aurum, Hugo 400 AN 1 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 hugo.aurum@stud.hs-hannover.de
+1257245 Ketchup, Ash 100 AN 1 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 ash.ketchup@stud.hs-hannaver.de
+1582021 Keleher, Siobhan 300 AN 1 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 siobhan.keleher@stud.hs-hannover.de
+1680234 Find, Nemo 370 AN 1 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 nemofind@stud.hs-hannover.de
+1937643 Poll, Lea 200 AN 1 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 Iea.nall@stud.hs-hannover.de
+3454235 Kopf,Serkan 400 AN 1 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 serkan.kopf@stud.hs-hannover.de
+1467634 Loch,Annika 270 AN 1 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 annika.loch@stud.hs-hannover.de
+2323451 Grab,Hannelie 500 AN 1 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 hannelie.grab@stud.hs-hannover.de
+1938475 von-Felde, Pia 300 AN 1 M-IIM 20192 20212 17.01.2022 649352 0 3369510 53225 204220 piawon-felde@stud.hs-hannover.de
+
+=======
 porgnr Mail sortname pnr pversuch okü spversion semester pdatum mtknr bonus labnr pordır bewertung pstatus
 204220 pierre.seffer@stud.hs-hannover.de Seffer, Pierre 649352 3 M-IIM 20192 20212 17.01.2022 1234567 0 3369510 53225 500 AN
 204220 alex.ussach@stud.hs-hannover.de Ussach, Alex 649352 2 M-IIM 20192 20212 17.01.2022 1234804 0 3369510 53225 500 AN
@@ -25,4 +41,5 @@ porgnr Mail sortname pnr pversuch okü spversion semester pdatum mtknr bonus lab
 204220 my.nguyen@stud.hs-hannover.de Nguyen, My 649352 1 M-IIM 20192 20212 17.01.2022 1240018 0 3369510 53225 100 AN
 204220 jannis.fortmann@stud.hs-hannover.de Fortmann, Jannis 649352 2 M-IIM 20192 20212 17.01.2023 1240255 0 3369510 53225 370 AN
 204220nicolas.von-franke@stud.hs-hannover.de © von-Franke, Nicolas 649352 3 M-IIM 20192 20212 17.01.2024 1240492 0 3369510 53225 170 AN
+>>>>>>> main
 

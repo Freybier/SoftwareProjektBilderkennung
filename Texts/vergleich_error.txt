@@ -1,7 +1,0 @@
-Line 1: expected 'ktxt', but got 'okü'
-Line 1: expected 'pordnr', but got 'pordır'
-Line 10: expected 'Gräte,', but got 'Grâte,'
-Line 20: expected 'roland.bittersohl@stud.hs-hannover.de', but got 'roland.bitterschl@stud.hs-hannover.de'
-Line 21: expected 'tohmas.kaiser@stud.hs-hannover.de', but got 'tahmas.kaiser@stud.hs-hannover.de'
-Line 27: expected '204220', but got '204220nicolas.von-franke@stud.hs-hannover.de'
-Line 27: expected 'nicolas.von-franke@stud.hs-hannover.de', but got '©'

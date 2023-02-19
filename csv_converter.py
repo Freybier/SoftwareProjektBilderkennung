@@ -1,6 +1,13 @@
 import csv
 
 
+def csv_to_txt():
+    with open("Texts/csvText.txt", "w") as my_output_file:
+        with open("CSV/csvTest2.csv", "r") as my_input_file:
+            [my_output_file.write(" ".join(row) + '\n') for row in csv.reader(my_input_file)]
+        my_output_file.close()
+
+
 class CSVObject:
     counter_input = 0
     counter_spalten = 0
@@ -31,7 +38,7 @@ class CSVObject:
                     self.fach_dozent(line)
                     continue
             bearbeitete_line = self.fehlerbereinigung(line)
-            if bearbeitete_line != None:
+            if bearbeitete_line is not None:
                 for x in range(len(bearbeitete_line)):
                     if x == len(bearbeitete_line) - 1:
                         csv_converted2.write(f"\"{bearbeitete_line[x]}\"")
@@ -40,7 +47,7 @@ class CSVObject:
                 csv_converted2.write("\n")
 
         csv_converted2.close()
-        self.csv_to_txt()
+        csv_to_txt()
 
     def fehlerbereinigung(self, line):
         words = line.split()
@@ -126,9 +133,3 @@ class CSVObject:
 
     def get_kurs(self):
         return self.kurs
-
-    def csv_to_txt(self):
-        with open("Texts/csvText.txt", "w") as my_output_file:
-            with open("CSV/csvTest2.csv", "r") as my_input_file:
-                [my_output_file.write(" ".join(row) + '\n') for row in csv.reader(my_input_file)]
-            my_output_file.close()
