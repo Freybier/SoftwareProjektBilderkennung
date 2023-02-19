@@ -4,7 +4,7 @@ import csv
 def csv_to_txt():
     with open("Texts/csvText.txt", "w") as my_output_file:
         with open("CSV/csv_Ausgabe.csv", "r") as my_input_file:
-            [my_output_file.write(" ".join(row) + '\n') for row in csv.reader(my_input_file)]
+            [my_output_file.write(" ".join(row) + '\n') for row in csv.reader(my_input_file, delimiter=';')]
         my_output_file.close()
 
 
@@ -33,14 +33,14 @@ class CSVObject:
                     self.kurs = gui.get_kurs()
                     self.dozent = gui.get_dozent()
                     continue
-                elif gui.get_kurs() != "" and gui.get_dozent == "":
-                    self.kurs = gui.get_kurs()
-                    self.set_dozent(line)
-                    continue
-                elif gui.get_kurs() == "" and gui.get_dozent != "":
-                    self.dozent = gui.get_dozent()
-                    self.set_kurs(line)
-                    continue
+                # elif gui.get_kurs() != "" and gui.get_dozent == "":
+                #     self.kurs = gui.get_kurs()
+                #     self.set_dozent(line)
+                #     continue
+                # elif gui.get_kurs() == "" and gui.get_dozent != "":
+                #     self.dozent = gui.get_dozent()
+                #     self.set_kurs(line)
+                #     continue
                 else:
                     first_line = False
                     self.fach_dozent(line)
