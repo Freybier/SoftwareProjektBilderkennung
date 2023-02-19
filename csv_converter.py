@@ -70,8 +70,10 @@ class CSVObject:
             elif words[i].endswith(","):
                 words[i] = f"{words[i]} {words[i + 1]}"
                 words[i + 1] = None
-            elif words[i] == "kit" or words[i] == "kbrt" or words[i] == "kbxt":
+            elif words[i] == "kit" or words[i] == "kbrt" or words[i] == "kbxt" or words[i] == "kbit":
                 words[i] = "ktxt"
+            elif words[i] == "mtkar:
+                words[i] = "mtknr"
             elif words[i] == "par":
                 words[i] = "pnr"
             if i == words[len(words)-1]:
