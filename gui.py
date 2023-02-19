@@ -2,13 +2,14 @@ import PySimpleGUI as sg
 import threading
 from auslesen import *
 from vergleich import *
-from database import *
+#from database import *
 
 
 class Gui:
     dozent = ""
     kurs = ""
-
+    files = None
+    vergleich_file = None
     def __init__(self):
         # creating the layout and window
         sg.theme('Dark')
@@ -33,8 +34,8 @@ class Gui:
                 self.files = self.filebrowser_image()
                 self.window['-FILES-'].update("{}".format(self.files))
             if event == 'Vergleich':
-                self.filebrowser_comparison()
-                self.window['-TEXT-'].update("{}".format("Texts/vergleich_text.txt"))
+                self.vergleich_file = self.filebrowser_comparison()
+                self.window['-TEXT-'].update("{}".format(self.vergleich_file))
             if event in (sg.WIN_CLOSED, 'Cancel'):
                 break
             if event == 'Aktualisieren':
@@ -45,10 +46,15 @@ class Gui:
                 self.dozent = values[0]
                 self.kurs = values[1]
                 # starts own threads for processing and comparing files
-                auslesen = threading.Thread(target=processing(self.files, csv1, self))
-                auslesen.start()
-                vergleichen = threading.Thread(target=vergleich_csv_text())
-                vergleichen.start()
+                if self.files is not None:
+                    auslesen = threading.Thread(target=processing(self.files, csv1, self))
+                    auslesen.start()
+                else:
+                    sg.popup_ok("Bitte wählen Sie eine Bildatei aus.")
+                if self.vergleich_file is not None:
+                    vergleichen = threading.Thread(target=vergleich_csv_text())
+                    print(f"Die Vergleichsdatei: {self.vergleich_file}")
+                    vergleichen.start()
             if event == 'Datenbank':
                 # starts own thread for building the database-gui
                 database_gui = threading.Thread(target=self.build_datenbank_gui())
@@ -62,29 +68,28 @@ class Gui:
             files = filename.split(';')
             return files
         else:
-            print("Ich hab keine Datei")
+            print("Ich hab keine Bilddatei")
             return
 
     def filebrowser_comparison(self):
         # opens new window to select files for comparison
         txt_filename = sg.popup_get_file('Geben Sie eine Textdatei an', multiple_files=True)
         if txt_filename is not None:
+            vergleich_file = txt_filename
             with open("Texts/vergleich_text.txt", "w") as file:
                 with open(txt_filename, "r") as selected_file:
                     file.write(selected_file.read())
+            return vergleich_file
         else:
-            print("Ich hab keine Datei")
-            txt_filename = "Texts/demo_vergleich.txt"
-            with open("Texts/vergleich_text.txt", "w") as file:
-                with open(txt_filename, "r") as demo_file:
-                    file.write(demo_file.read())
+            print("Ich hab keine Textdatei")
+            return
 
     def get_dozent(self):
         return self.dozent
 
     def get_kurs(self):
         return self.kurs
-
+"""
     def build_datenbank_gui(self):
         # connecting to database
         mydb = mysql.connector.connect(
@@ -178,3 +183,4 @@ class Gui:
             return values['SELECTED']
         else:
             return 0
+"""

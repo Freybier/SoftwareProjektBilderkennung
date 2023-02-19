@@ -2,7 +2,7 @@ import pytesseract
 import cv2
 from hocr_conf import *
 from csv_sorte import *
-from database import *
+#from database import *
 
 myconfig = r"--psm 6 --oem 3 --user-words custom_words.txt"
 
@@ -17,7 +17,7 @@ def processing(files, csv1, gui1):
         fach = csv1.get_kurs()
         doz = csv1.get_dozent()
 
-        einlesen(fach, doz)
+        #einlesen(fach, doz)
 
 
 def text_extraction(file):
