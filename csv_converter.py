@@ -21,12 +21,6 @@ class CSVObject:
             if line == "\n" or line == "" or line == " " or line == "\t":
                 continue
             if first_line and lines[0] != "startHISsheet":
-                words = line.split()
-                for i in range(len(words)):
-                    if self.counter_spalten == 0:
-                        if words[i] == "Mail":
-                            self.counter_spalten = len(words)
-                            continue
                 if gui.get_kurs() != "" and gui.get_dozent() != "":
                     first_line = False
                     self.kurs = gui.get_kurs()

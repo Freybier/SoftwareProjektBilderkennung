@@ -17,7 +17,7 @@ def processing(files, csv1, gui1):
         fach = csv1.get_kurs()
         doz = csv1.get_dozent()
 
-        # einlesen(fach, doz)
+        einlesen(fach, doz)
 
 
 def text_extraction(file):
