@@ -72,7 +72,7 @@ class CSVObject:
                 words[i + 1] = None
             elif words[i] == "kit" or words[i] == "kbrt" or words[i] == "kbxt" or words[i] == "kbit":
                 words[i] = "ktxt"
-            elif words[i] == "mtkar:
+            elif words[i] == "mtkar":
                 words[i] = "mtknr"
             elif words[i] == "par":
                 words[i] = "pnr"
