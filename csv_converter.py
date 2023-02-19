@@ -43,7 +43,7 @@ class CSVObject:
                     if x == len(bearbeitete_line) - 1:
                         csv_converted2.write(f"\"{bearbeitete_line[x]}\"")
                     else:
-                        csv_converted2.write(f"\"{bearbeitete_line[x]}\",")
+                        csv_converted2.write(f"\"{bearbeitete_line[x]}\";")
                 csv_converted2.write("\n")
 
         csv_converted2.close()

@@ -24,7 +24,7 @@ def processing(files, csv1, gui1):
 
         text = text_extraction(x)
         csv1.converter(text, gui1)
-        # csv_sorte()
+        csv_sorte()
 
         fach = csv1.get_kurs()
         doz = csv1.get_dozent()
