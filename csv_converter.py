@@ -33,6 +33,14 @@ class CSVObject:
                     self.kurs = gui.get_kurs()
                     self.dozent = gui.get_dozent()
                     continue
+                elif gui.get_kurs() != "" and gui.get_dozent == "":
+                    self.kurs = gui.get_kurs()
+                    self.set_dozent(line)
+                    continue
+                elif gui.get_kurs() == "" and gui.get_dozent != "":
+                    self.dozent = gui.get_dozent()
+                    self.set_kurs(line)
+                    continue
                 else:
                     first_line = False
                     self.fach_dozent(line)
@@ -133,3 +141,13 @@ class CSVObject:
 
     def get_kurs(self):
         return self.kurs
+
+    def set_dozent(self, line):
+        first, *middle, last = line.split()
+        self.dozent = last
+
+    def set_kurs(self, line):
+        first, *middle, last = line.split()
+        self.kurs = first
+        for word in middle:
+            self.kurs = self.kurs + " " + word
