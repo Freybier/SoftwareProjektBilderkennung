@@ -15,19 +15,25 @@ class CSVObject:
     def converter(self, text, gui):
         csv_converted2 = open("CSV/csvTest2.csv", "w")
         lines = text.split("\n")
-        first_line2 = True
+        first_line = True
 
         for line in lines:
-            if line == "\n" or line == "":
+            if line == "\n" or line == "" or line == " " or line == "\t":
                 continue
-            if first_line2 and lines[0] != "startHISsheet":
+            if first_line and lines[0] != "startHISsheet":
+                words = line.split()
+                for i in range(len(words)):
+                    if self.counter_spalten == 0:
+                        if words[i] == "Mail":
+                            self.counter_spalten = len(words)
+                            continue
                 if gui.get_kurs() != "" and gui.get_dozent() != "":
-                    first_line2 = False
+                    first_line = False
                     self.kurs = gui.get_kurs()
                     self.dozent = gui.get_dozent()
                     continue
                 else:
-                    first_line2 = False
+                    first_line = False
                     self.fach_dozent(line)
                     continue
             bearbeitete_line = self.fehlerbereinigung(line)
@@ -51,14 +57,14 @@ class CSVObject:
             if words[i] == "" or words[i] is None:
                 continue
             elif words[i].endswith("."):
-                words[i] = words[i].replace('.','')
+                words[i] = words[i].replace('.', '')
             elif words[i].endswith(".de"):
                 for char in words[i]:
                     if char == '&':
                         words[i] = words[i].replace('&', '@')
                     elif char == '®':
                         words[i] = words[i].replace('®', '@')
-            elif words[i].lower() == "startHISsheet".lower() or words[i].lower() == "endHISsheet".lower()\
+            elif words[i].lower() == "startHISsheet".lower() or words[i].lower() == "endHISsheet".lower() \
                     or words[i].lower() == "endHISsheet.".lower():
                 return
             elif words[i] == "_" or words[i] == "-" or words[i] == "—" or words[i] == "=" or words[i] == " ":
@@ -76,7 +82,7 @@ class CSVObject:
                 words[i] = "mtknr"
             elif words[i] == "par":
                 words[i] = "pnr"
-            if i == words[len(words)-1]:
+            if i == words[len(words) - 1]:
                 return words
         filtered_words = [word for word in words if word is not None]
         final_words = self.len_check(filtered_words)
@@ -89,7 +95,7 @@ class CSVObject:
             final_array = []
             temp_array = []
             mail_finished = False
-            differenz = len(words)-self.counter_spalten
+            differenz = len(words) - self.counter_spalten
             for i, word in enumerate(words):
                 if mail_finished:
                     final_array.append(word)
@@ -97,8 +103,8 @@ class CSVObject:
                     temp_array.append(word)
                 if word.endswith(".de"):
                     e_mail = ""
-                    for j in range(differenz+1):
-                        e_mail = e_mail + words[i-differenz+j]
+                    for j in range(differenz + 1):
+                        e_mail = e_mail + words[i - differenz + j]
                         temp_array.pop()
                     for elem in temp_array:
                         final_array.append(elem)

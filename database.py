@@ -2,7 +2,7 @@ import mysql.connector
 import pandas as pd
 
 def initialize_database():
-    # Verbindung zur Datenbank herstellen
+    # connecting to databse
     mydb = mysql.connector.connect(
         host="localhost",
         user="root",
@@ -10,7 +10,7 @@ def initialize_database():
     )
     my_cursor = mydb.cursor()
 
-    # Wenn es noch keine Datenbank mit dem Namen "notenuebersicht" gibt wird eine erstellt
+    # if there is no database with the name "notenuebersicht", create one
     my_cursor.execute("SHOW DATABASES LIKE 'notenuebersicht'")
     result = my_cursor.fetchall()
     x = []
@@ -18,7 +18,7 @@ def initialize_database():
         my_cursor.execute("CREATE DATABASE notenuebersicht")
 
 def erstelle_tabelle(name):
-    # Verbindung zur Datenbank herstellen
+    # connecting to database
     mydb = mysql.connector.connect(
         host="localhost",
         user="root",
@@ -30,9 +30,9 @@ def erstelle_tabelle(name):
     my_cursor.execute(test)
     result = my_cursor.fetchone()
 
-    # Wenn es noch keine Tabelle mit dem eingegebenen Namen gibt wird eine erstellt
+    # If there is no table with given name, create one
     if result:
-        x = 0;
+        return
     else:
         sql = f"""
                     CREATE TABLE `{name}`(
@@ -59,7 +59,7 @@ def erstelle_tabelle(name):
         my_cursor.execute(sql)
 
 def loesche_tabelle(name):
-    # Verbindung zur Datenbank herstellen
+    # connecting to database
     mydb = mysql.connector.connect(
         host="localhost",
         user="root",
@@ -71,12 +71,12 @@ def loesche_tabelle(name):
     my_cursor.execute(test)
     result = my_cursor.fetchone()
 
-    # Spalte mit dem übergebenen Namen wird gelöscht
+    # column with given name is deleted
     if result:
         my_cursor.execute(f"DROP TABLE {name}")
 
 def einlesen(fach, doz):
-    # Verbindung zur Datenbank herstellen
+    # connecting to database
     mydb = mysql.connector.connect(
         host="localhost",
         user="root",
@@ -88,18 +88,20 @@ def einlesen(fach, doz):
     spalten = ['mtknr','sortname','bewertung','pstatus','pversuch','ktxt','spversion','semester','pdatum','pnr','bonus','labnr','pordnr','porgnr','mail','fach','`Dozierende Person`']
     text = ''
 
-    # Ein String mit den Namen wird erzeugt
+    # creating string with the names
     for i in range(0, 17):
         text += spalten[i]
         if (i == 16):
             break
         text += ', '
 
-    # CSV wird geöffnet
-    df = pd.read_csv("CSV/csv_sorted.csv")#, index_col=False, delimiter=',')
+    # open CSV
+    df = pd.read_csv("CSV/csv_sorted.csv", index_col=False, delimiter=',')
+
+    # df = pd.read_csv("CSV/csv_sorted.csv")#, index_col=False, delimiter=',')
     # df = pd.read_csv("CSV/csvTest2.csv", index_col=False, delimiter=',')      # Hier wird die unsortierte CSV geöffnet -> In manchen Fällen besseres Ergebnis
 
-    # Die Werte werden in die Tabelle eingelesen
+    # reading values into table
     for i, row in df.iterrows():
         sql = f"INSERT IGNORE INTO Tabelle ({text}) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
         my_cursor.execute(sql, tuple(row) + (fach, doz))

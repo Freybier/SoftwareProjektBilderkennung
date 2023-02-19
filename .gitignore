@@ -2,5 +2,8 @@
 /Texts/
 /CSV/
 /Text-Extraction-Table-Image/
-/output.hocr
+/Texts/output.hocr
 /Texts/hocr_confidence.txt
+/Texts/vergleich_csv.txt
+/Texts/vergleich_error.txt
+/Texts
