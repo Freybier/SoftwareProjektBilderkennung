@@ -4,7 +4,7 @@ import csv
 def csv_to_txt():
     with open("Texts/csvText.txt", "w") as my_output_file:
         with open("CSV/csvTest2.csv", "r") as my_input_file:
-            [my_output_file.write(" ".join(row) + '\n') for row in csv.reader(my_input_file)]
+            [my_output_file.write(" ".join(row) + '\n') for row in csv.reader(my_input_file, delimiter=';')]
         my_output_file.close()
 
 
