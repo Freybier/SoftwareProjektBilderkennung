@@ -70,12 +70,14 @@ class CSVObject:
             elif words[i].endswith(","):
                 words[i] = f"{words[i]} {words[i + 1]}"
                 words[i + 1] = None
-            elif words[i] == "kit" or words[i] == "kbrt" or words[i] == "kbxt" or words[i] == "kbit" or words[i] == "kbt":
+            elif words[i] == "kit" or words[i] == "kbrt" or words[i] == "kbxt" or words[i] == "kbit" or words[i] == "kbt" or words[i] == "kb":
                 words[i] = "ktxt"
             elif words[i] == "mtkar":
                 words[i] = "mtknr"
             elif words[i] == "par":
                 words[i] = "pnr"
+            elif words[i] == "labar":
+                words[i] = "labnr"
             if i == words[len(words) - 1]:
                 return words
         filtered_words = [word for word in words if word is not None]
