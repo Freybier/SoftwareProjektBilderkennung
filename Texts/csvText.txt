@@ -1,27 +1,28 @@
+porgnr Mail sortname pnr pversuch okü spversion semester pdatum mtknr bonus labnr pordır bewertung pstatus
 204220 pierre.seffer@stud.hs-hannover.de Seffer, Pierre 649352 3 M-IIM 20192 20212 17.01.2022 1234567 0 3369510 53225 500 AN
 204220 alex.ussach@stud.hs-hannover.de Ussach, Alex 649352 2 M-IIM 20192 20212 17.01.2022 1234804 0 3369510 53225 500 AN
-204220 harry.snape@stud.hs-hannover.de Snape, Harıy 649352 1 M-IIM 20192 20212 17.01.2022 1235041 0 3369510 53225 300 AN
+204220 harry.snape@stud.hs-hannover.de Snape, Harry 649352 1 M-IIM 20192 20212 17.01.2022 1235041 0 3369510 53225 300 AN
 204220 max.kuhle@stud.hs-hannover.de Kuhle, Max 649352 1 M-IIM 20192 20212 17.01.2022 1235278 0 3369510 53225 500 AN
 204220 michael.jackman@stud.hs-hannover.de Jackman, Michael 649352 1 M-IIM 20192 20212 17.01.2022 1235515 0 3369510 53225 100 AN
 204220 gabi.lein@stud.hs-hannover.de Lein, Gabi 649352 2 M-IIM 20192 20212 17.01.2022 1235752 0 3369510 53225 100 AN
 204220 weser.bergland@stud.hs-hannover.de Bergland, Weser 649352 2 M-IIM 20192 20212 17.01.2022 1235989 0 3369510 53225 100 AN
 204220 green.berlin@stud.hs-hannover.de Berlin, Green 649352 3 M-IIM 20192 20212 17.01.2022 1236226 0 3369510 53225 170 AN
-204220 steffan.gräte@stud.hs-hannover.de Gräte, Steffan 649352 1 M-IIM 20192 20212 17.01.2022 1236463 0 3369510 53225 230 AN
+204220 steffan.gräte@stud.hs-hannover.de Grâte, Steffan 649352 1 M-IIM 20192 20212 17.01.2022 1236463 0 3369510 53225 230 AN
 204220 ani.vader@stud.hs-hannover.de Vader, Ani 649352 2 M-IIM 20192 20212 17.01.2022 1236700 0 3369510 53225 400 AN
 204220 haris.pilton@stud.hs-hannover.de Pilton, Haris 649352 3 M-IIM 20192 20212 17.01.2022 1236937 0 3369510 53225 300 AN
 204220 dirk.gin@stud.hs-hannover.de Gin, Dirk 649352 1 M-IIM 20192 20212 17.01.2022 1237174 0 3369510 53225 170 AN
-204220 an.loris@stud.hs-hannover.de Loris, Jan 649352 3 M-IIM 20192 20212 17.01.2022 1237411 0 3369510 53225 500 AN
+204220 jan.loris@stud.hs-hannover.de Loris, Jan 649352 3 M-IIM 20192 20212 17.01.2022 1237411 0 3369510 53225 500 AN
 204220 kaja.hahnheiser@stud.hs-hannover.de Hahnheiser, Kaja 649352 2 M-IIM 20192 20212 17.01.2022 1237648 0 3369510 53225 500 AN
 204220 lea.gruppel@stud.hs-hannover.de Gruppel, Lea 649352 1 M-IIM 20192 20212 17.01.2022 1237885 0 3369510 53225 130 AN
 204220 katja.ritscher@stud.hs-hannover.de Ritscher, Katja 649352 1 M-IIM 20192 20212 17.01.2022 1238122 0 3369510 53225 400 AN
 204220 david.koch@stud.hs-hannover.de Koch, David 649352 1 M-IIM 20192 20212 17.01.2022 1238359 0 3369510 53225 370 AN
 204220 robin.schulz@stud.hs-hannover.de Schulz, Robin 649352 2 M-IIM 20192 20212 17.01.2022 1238596 0 3369510 53225 370 AN
 204220 roland.bitterschl@stud.hs-hannover.de Bittersohl, Roland 649352 2 M-IIM 20192 20212 17.01.2022 1238833 0 3369510 53225 230 AN
-204220 tohmas.kaiser@stud.hs-hannover.de Kaiser, Tohmas 649352 3 M-IIM 20192 20212 17.01.2022 1239070 0 3369510 53225 200 AN
+204220 tahmas.kaiser@stud.hs-hannover.de Kaiser, Tohmas 649352 3 M-IIM 20192 20212 17.01.2022 1239070 0 3369510 53225 200 AN
 204220 pia.geipel@stud.hs-hannover.de Geipel, Pia 649352 1 M-IIM 20192 20212 17.01.2022 1239307 0 3369510 53225 100 AN
 204220 nele.kiesel@stud.hs-hannover.de Kiesel, Nele 649352 2 M-IIM 20192 20212 17.01.2022 1239544 0 3369510 53225 270 AN
 204220 okan.koc@stud.hs-hannover.de Koc, Okan 649352 3 M-IIM 20192 20212 17.01.2022 1239781 0 3369510 53225 500 AN
-204220 my.nguyen@@stud.hs-hannover.de Nguyen, My 649352 1 M-IIM 20192 20212 17.01.2022 1240018 0 3369510 53225 100 AN
-204220 annis.fortmann@stud.hs-hannover.de Fortmann, Jannis 649352 2 M-IIM 20192 20212 17.01.2023 1240255 0 3369510 53225 370 AN
-204220 nicolas.von-franke@stud.hs-hannover.de von-Franke, Nicolas 649352 3 M-IIM 20192 20212 17.01.2024 1240492 0 3369510 53225 170 AN
+204220 my.nguyen@stud.hs-hannover.de Nguyen, My 649352 1 M-IIM 20192 20212 17.01.2022 1240018 0 3369510 53225 100 AN
+204220 jannis.fortmann@stud.hs-hannover.de Fortmann, Jannis 649352 2 M-IIM 20192 20212 17.01.2023 1240255 0 3369510 53225 370 AN
+204220nicolas.von-franke@stud.hs-hannover.de © von-Franke, Nicolas 649352 3 M-IIM 20192 20212 17.01.2024 1240492 0 3369510 53225 170 AN
 
