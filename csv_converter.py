@@ -63,9 +63,9 @@ class CSVObject:
                 return
             elif words[i] == "_" or words[i] == "-" or words[i] == "—" or words[i] == "=" or words[i] == " ":
                 words[i] = None
-            elif words[i] == "MM" or words[i] == 'MAM':
+            elif words[i] == "MM" or words[i] == 'MAM' words[i] == 'MIM':
                 words[i] = "M-IIM"
-            elif words[i] == 'o' or words[i] == '°':
+            elif words[i] == 'o' or words[i] == '°' or words[i] == 'a':
                 words[i] = "0"
             elif words[i].endswith(","):
                 words[i] = f"{words[i]} {words[i + 1]}"
